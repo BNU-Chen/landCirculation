@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Statusdef" table="statusdef" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="statusCode" type="string">
+            <column name="statusCode" length="6" />
+        </property>
+        <property name="statusDesc" type="string">
+            <column name="statusDesc" length="10" />
+        </property>
+        <set name="applies" table="apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="currentStatusId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Apply" />
+        </set>
+    </class>
+</hibernate-mapping>

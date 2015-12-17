@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.PostApply" table="post_apply" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userPerson" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="posterId" />
+        </many-to-one>
+        <property name="idcode" type="string">
+            <column name="Idcode" length="18" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="startDate" length="10" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="endDate" length="10" />
+        </property>
+        <property name="poster" type="string">
+            <column name="poster" length="45" />
+        </property>
+        <property name="responsePicname" type="string">
+            <column name="responsePicname" length="10" />
+        </property>
+        <property name="responseTel" type="string">
+            <column name="responseTel" length="11" />
+        </property>
+        <property name="responseEmail" type="string">
+            <column name="responseEmail" length="45" />
+        </property>
+        <property name="responseAddress" type="string">
+            <column name="responseAddress" length="45" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="2" />
+        </property>
+        <property name="publishDate" type="date">
+            <column name="publishDate" length="10" />
+        </property>
+        <set name="applypostResponses" table="applypost_response" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="postApplyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ApplypostResponse" />
+        </set>
+        <set name="postdetailApplies" table="postdetail_apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="postId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.PostdetailApply" />
+        </set>
+    </class>
+</hibernate-mapping>

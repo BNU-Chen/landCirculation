@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Applystatus" table="applystatus" catalog="mysql_land_circulation">
+        <composite-id name="id" class="cn.ac.irsa.landcirculation.ApplystatusId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="applierId" type="java.lang.Integer">
+                <column name="applierId" />
+            </key-property>
+            <key-property name="applierIdcode" type="string">
+                <column name="applierIDCode" />
+            </key-property>
+            <key-property name="applyDate" type="date">
+                <column name="applyDate" length="10" />
+            </key-property>
+            <key-property name="stepName" type="string">
+                <column name="stepName" length="8" />
+            </key-property>
+            <key-property name="msgText" type="string">
+                <column name="msgText" length="50" />
+            </key-property>
+            <key-property name="statusDesc" type="string">
+                <column name="statusDesc" length="10" />
+            </key-property>
+            <key-property name="applierUserName" type="string">
+                <column name="applierUserName" length="20" />
+            </key-property>
+            <key-property name="statusCode" type="string">
+                <column name="statusCode" length="6" />
+            </key-property>
+            <key-property name="transferType" type="string">
+                <column name="transferType" length="1" />
+            </key-property>
+            <key-property name="transferTypeName" type="string">
+                <column name="transferTypeName" length="20" />
+            </key-property>
+            <key-property name="circulationTypeName" type="string">
+                <column name="circulationTypeName" length="20" />
+            </key-property>
+            <key-property name="circulationType" type="string">
+                <column name="circulationType" length="2" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

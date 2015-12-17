@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.TransfereePerson" table="transferee_person" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="transfereeIdcode" type="string">
+            <column name="transfereeIDCode" length="18" />
+        </property>
+        <property name="transfereeName" type="string">
+            <column name="transfereeName" length="20" />
+        </property>
+        <property name="transfereeTel" type="java.lang.Long">
+            <column name="transfereeTel" precision="11" scale="0" />
+        </property>
+        <property name="transfereeAddress" type="string">
+            <column name="transfereeAddress" length="50" />
+        </property>
+        <property name="transfereeEmail" type="string">
+            <column name="transfereeEmail" length="45" />
+        </property>
+        <property name="tranfereeEducation" type="string">
+            <column name="tranfereeEducation" length="2" />
+        </property>
+        <property name="tranfereeEconomicbkground" type="string">
+            <column name="tranfereeEconomicbkground" />
+        </property>
+        <set name="rentcontracts" table="rentcontract" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="transfereePersonId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Rentcontract" />
+        </set>
+    </class>
+</hibernate-mapping>

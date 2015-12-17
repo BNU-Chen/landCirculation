@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.CirculationDemand" table="circulation_demand" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userPerson" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="demanderId" />
+        </many-to-one>
+        <property name="setupDate" type="timestamp">
+            <column name="setupDate" length="19" />
+        </property>
+        <property name="demanderType" type="string">
+            <column name="demanderType" length="2" />
+        </property>
+        <property name="demanderTypeName" type="string">
+            <column name="demanderTypeName" length="10" />
+        </property>
+        <property name="demanderIdcode" type="string">
+            <column name="demanderIdcode" length="18" />
+        </property>
+        <property name="demanderName" type="string">
+            <column name="demanderName" length="20" />
+        </property>
+        <property name="demanderAddress" type="string">
+            <column name="demanderAddress" />
+        </property>
+        <property name="demanderTel" type="string">
+            <column name="demanderTel" length="11" />
+        </property>
+        <property name="demanderEmail" type="string">
+            <column name="demanderEmail" />
+        </property>
+        <property name="landAddress" type="string">
+            <column name="landAddress" length="256" />
+        </property>
+        <property name="landProvince" type="string">
+            <column name="landProvince" length="20" />
+        </property>
+        <property name="landProvinceName" type="string">
+            <column name="landProvinceName" length="15" />
+        </property>
+        <property name="landCity" type="string">
+            <column name="landCity" length="15" />
+        </property>
+        <property name="landCityName" type="string">
+            <column name="landCityName" length="20" />
+        </property>
+        <property name="landCounty" type="string">
+            <column name="landCounty" length="20" />
+        </property>
+        <property name="landCountyName" type="string">
+            <column name="landCountyName" length="15" />
+        </property>
+        <property name="landTown" type="string">
+            <column name="landTown" length="20" />
+        </property>
+        <property name="landTownName" type="string">
+            <column name="landTownName" length="15" />
+        </property>
+        <property name="landVillage" type="string">
+            <column name="landVillage" length="20" />
+        </property>
+        <property name="landVillageName" type="string">
+            <column name="landVillageName" length="15" />
+        </property>
+        <property name="landTeam" type="string">
+            <column name="landTeam" length="3" />
+        </property>
+        <property name="circulationType" type="string">
+            <column name="circulationType" length="2" />
+        </property>
+        <property name="circulationTypeName" type="string">
+            <column name="circulationTypeName" length="2" />
+        </property>
+        <property name="landDuration" type="java.lang.Integer">
+            <column name="landDuration" />
+        </property>
+        <property name="landType" type="string">
+            <column name="landType" length="2" />
+        </property>
+        <property name="landTypeName" type="string">
+            <column name="landTypeName" length="10" />
+        </property>
+        <property name="landArea" type="java.lang.Double">
+            <column name="landArea" precision="15" scale="3" />
+        </property>
+        <property name="landPrice" type="java.lang.Integer">
+            <column name="landPrice" />
+        </property>
+        <property name="landUseType" type="string">
+            <column name="landUseType" length="20" />
+        </property>
+        <property name="picIdcode" type="string">
+            <column name="picIdcode" length="18" />
+        </property>
+        <property name="picName" type="string">
+            <column name="picName" length="20" />
+        </property>
+        <property name="picTel" type="string">
+            <column name="picTel" length="11" />
+        </property>
+        <property name="picAddress" type="string">
+            <column name="picAddress" />
+        </property>
+        <property name="picEmail" type="string">
+            <column name="picEmail" />
+        </property>
+        <property name="demanderDescript" type="string">
+            <column name="demanderDescript" />
+        </property>
+        <property name="projectDescript" type="string">
+            <column name="projectDescript" />
+        </property>
+        <property name="currentStatusCode" type="string">
+            <column name="currentStatusCode" length="2" />
+        </property>
+        <property name="currentReturnMsg" type="string">
+            <column name="currentReturnMsg" />
+        </property>
+    </class>
+</hibernate-mapping>

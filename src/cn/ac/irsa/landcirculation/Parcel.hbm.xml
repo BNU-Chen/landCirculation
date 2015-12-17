@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Parcel" table="parcel" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="apply" class="cn.ac.irsa.landcirculation.Apply" fetch="select">
+            <column name="applicationId" />
+        </many-to-one>
+        <property name="parcelCode" type="string">
+            <column name="parcelCode" length="23" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="1" />
+        </property>
+        <property name="rgArea" type="java.lang.Double">
+            <column name="rgArea" precision="22" scale="0" />
+        </property>
+        <property name="realArea" type="java.lang.Double">
+            <column name="realArea" precision="22" scale="0" />
+        </property>
+        <property name="basicFarmland" type="java.lang.Integer">
+            <column name="basicFarmland" />
+        </property>
+        <property name="east" type="string">
+            <column name="east" length="200" />
+        </property>
+        <property name="south" type="string">
+            <column name="south" length="200" />
+        </property>
+        <property name="west" type="string">
+            <column name="west" length="200" />
+        </property>
+        <property name="north" type="string">
+            <column name="north" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

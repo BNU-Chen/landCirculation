@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.UserPerson" table="user_person" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="userName" length="20" not-null="true">
+                <comment>&#211;&#195;&#187;&#167;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="8" not-null="true">
+                <comment>&#195;&#220;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="userCategory" type="string">
+            <column name="userCategory" length="2" />
+        </property>
+        <property name="userCategoryName" type="string">
+            <column name="userCategoryName" length="10" />
+        </property>
+        <property name="userType" type="string">
+            <column name="userType" length="2" />
+        </property>
+        <property name="userTypeName" type="string">
+            <column name="userTypeName" length="10" />
+        </property>
+        <property name="userIdtype" type="string">
+            <column name="userIdtype" length="2" />
+        </property>
+        <property name="userIdtypeName" type="string">
+            <column name="userIdtypeName" />
+        </property>
+        <property name="userIdcode" type="string">
+            <column name="userIdcode" length="18" not-null="true">
+                <comment>&#201;&#237;&#183;&#221;&#214;&#164;&#186;&#197;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="mobilephone" type="string">
+            <column name="mobilephone" length="11">
+                <comment>&#202;&#214;&#187;&#250;</comment>
+            </column>
+        </property>
+        <property name="education" type="string">
+            <column name="education" length="2" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45">
+                <comment>&#181;&#231;&#215;&#211;&#211;&#202;&#188;&#254;</comment>
+            </column>
+        </property>
+        <property name="province" type="string">
+            <column name="province" length="10">
+                <comment>&#202;&#161;(&#214;&#177;&#207;&#189;&#202;&#208;&#161;&#162;&#215;&#212;&#214;&#206;&#199;&#248;)</comment>
+            </column>
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="10">
+                <comment>&#202;&#208;</comment>
+            </column>
+        </property>
+        <property name="county" type="string">
+            <column name="county" length="10">
+                <comment>&#207;&#216;(&#199;&#248;)</comment>
+            </column>
+        </property>
+        <property name="town" type="string">
+            <column name="town" length="10">
+                <comment>&#207;&#231;&#213;&#242;(&#189;&#214;&#181;&#192;)</comment>
+            </column>
+        </property>
+        <property name="village" type="string">
+            <column name="village" length="10">
+                <comment>&#208;&#208;&#213;&#254;&#180;&#229;(&#190;&#211;&#206;&#175;&#187;&#225;)</comment>
+            </column>
+        </property>
+        <property name="team" type="string">
+            <column name="team" length="10" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        <property name="contactAddress" type="string">
+            <column name="contactAddress" length="100">
+                <comment>&#193;&#170;&#207;&#181;&#181;&#216;&#214;&#183;</comment>
+            </column>
+        </property>
+        <property name="photoFilename" type="string">
+            <column name="photoFilename">
+                <comment>&#213;&#213;&#198;&#172;&#206;&#196;&#188;&#254;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="idcard1" type="string">
+            <column name="IDCard1">
+                <comment>&#201;&#237;&#183;&#221;&#214;&#164;&#201;&#168;&#195;&#232;&#188;&#254;&#206;&#196;&#188;&#254;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="idcard2" type="string">
+            <column name="IDCard2" />
+        </property>
+        <property name="picName" type="string">
+            <column name="picName" length="20" />
+        </property>
+        <property name="picIdcode" type="string">
+            <column name="picIdcode" length="18" />
+        </property>
+        <property name="picTel" type="string">
+            <column name="picTel" length="11" />
+        </property>
+        <property name="picAddress" type="string">
+            <column name="picAddress" />
+        </property>
+        <property name="picEmail" type="string">
+            <column name="picEmail" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="3" />
+        </property>
+        <set name="applypostResponsesForRecorderId" table="applypost_response" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recorderId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ApplypostResponse" />
+        </set>
+        <set name="landcontractimgs" table="landcontractimg" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="owerId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Landcontractimg" />
+        </set>
+        <set name="reviewUserpersonsForReviewerId" table="review_userperson" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Reviewer_ID" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ReviewUserperson" />
+        </set>
+        <set name="reviewUserpersonsForUserPersonId" table="review_userperson" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserPerson_ID" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ReviewUserperson" />
+        </set>
+        <set name="landwarrants" table="landwarrant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ownerId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Landwarrant" />
+        </set>
+        <set name="bidenrollsForReviewerId" table="bidenroll" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reviewerId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Bidenroll" />
+        </set>
+        <set name="userRoles" table="user_role" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.UserRole" />
+        </set>
+        <set name="bidenrollsForBidderId" table="bidenroll" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bidderId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Bidenroll" />
+        </set>
+        <set name="circulationDemands" table="circulation_demand" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="demanderId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.CirculationDemand" />
+        </set>
+        <set name="bidposts" table="bidpost" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="posterId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Bidpost" />
+        </set>
+        <set name="bidtenders" table="bidtender" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bidderId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Bidtender" />
+        </set>
+        <set name="applypostResponsesForDealerId" table="applypost_response" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dealerId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ApplypostResponse" />
+        </set>
+        <set name="postApplies" table="post_apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="posterId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.PostApply" />
+        </set>
+        <set name="applies" table="apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applierId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Apply" />
+        </set>
+    </class>
+</hibernate-mapping>

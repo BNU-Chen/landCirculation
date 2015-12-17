@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+
+	<!-- 创建包default，继承struts-default -->
+	<package name="commonbasic" extends="json-default" abstract="true">
+		<global-results>
+			<result name="CurrenUserpersonIsNull">/user/sessionTimeout.jsp</result>
+		</global-results>
+	</package>
+
+	<package name="common" extends="struts-default" namespace="/common">
+		<action name="CodeProvince" class="cn.ac.irsa.landcirculation.CodeProvinceAction">
+			<result>/common/province_list.jsp</result>
+		</action>
+		<action name="CodeCity" class="cn.ac.irsa.landcirculation.CodeCityAction">
+			<result>/common/city_list.jsp</result>
+		</action>
+		<action name="CodeCounty" class="cn.ac.irsa.landcirculation.CodeCountyAction">
+			<result>/common/county_list.jsp</result>
+		</action>
+		<action name="CodeTown" class="cn.ac.irsa.landcirculation.CodeTownAction">
+			<result>/common/town_list.jsp</result>
+		</action>
+		<action name="CodeVillage" class="cn.ac.irsa.landcirculation.CodeVillageAction">
+			<result>/common/village_list.jsp</result>
+		</action>
+	</package>
+
+	<package name="default" extends="commonbasic" namespace="/user">
+		<!-- 名为userPerson的Action，实现类为userPersonAction -->
+		<global-results>
+			<result name="CurrenUserpersonIsNull">/user/sessionTimeout.jsp</result>
+		</global-results>
+		<action name="userPerson" class="cn.ac.irsa.landcirculation.UserPersonAction">
+			<result>/user/indexMain.jsp</result>
+			<result name="ok">userPersonOK.jsp</result>
+			<result name="Success_updatePassword">/user/updatePasswordOK.jsp</result>
+			<result name="viewUserPeronSuccess">/user/userPerson_view.jsp</result>
+			<result name="modifyUserPeronSuccess">/user/userPerson_modify.jsp</result>
+			<result name="updateUserPersonSuccess">/user/userPerson_view.jsp</result>
+			<result name="quitUserPersonSuccess">/user/default.html</result>
+			<result name="reviewListSuccess">/user/reviewList.jsp</result>
+			<result name="reviewUserPersonSuccess">/user/reviewUserPerson.jsp</result>
+			<result name="addReviewUserpersonSuccess">/user/ok.jsp</result>
+			<result name="registerError">/user/register_error.jsp</result>
+			<result name="loginError">/user/login.jsp</result>
+
+			<result name="error">/user/error.jsp</result>
+			<result name="test">/user/test.jsp</result>
+		</action>
+
+		<action name="userPersonUploadPhoto" class="cn.ac.irsa.landcirculation.UserPersonUploadPhoto">
+			<result name="uploadPhotoSuccess">/user/userPersonUploadPhoto.jsp</result>
+			<result name="error">/user/error.jsp</result>
+		</action>
+
+		<action name="userPersonUploadIDCard"
+			class="cn.ac.irsa.landcirculation.UserPersonUploadIDCard">
+			<result name="uploadIDCardSuccess">/user/userPersonUploadIDCard.jsp</result>
+			<result name="error">/user/error.jsp</result>
+		</action>
+
+		<action name="login" class="cn.ac.irsa.landcirculation.LoginAction">
+			<result>/user/hello.jsp</result>
+			<result name="error">/user/error.jsp</result>
+		</action>
+	</package>
+
+	<package name="apply" extends="commonbasic" namespace="/apply">
+		<!-- 名为userPerson的Action，实现类为userPersonAction -->
+		<global-results>
+			<result name="CurrenUserpersonIsNull">/user/sessionTimeout.jsp</result>
+		</global-results>
+		<action name="Apply" class="cn.ac.irsa.landcirculation.ApplyAction">
+			<result name="listApplySuccess">/apply/apply_rentIndex.jsp</result>
+			<result name="listApply_rentSuccess">/apply/apply_rentIndex.jsp</result>
+			<result name="listApply_shareSuccess">/apply/apply_shareIndex.jsp</result>
+			<result name="listApply_assignmentSuccess">/apply/apply_assignmentIndex.jsp</result>
+			<result name="listApply_subcontractSuccess">/apply/apply_subcontractIndex.jsp</result>
+			<result name="listApply_exchangeSuccess">/apply/apply_exchangeIndex.jsp</result>
+
+			<result name="deleteApplySuccess">/apply/apply_rentIndex.jsp</result>
+			<result name="updateApplySuccess">/apply/apply_rent.jsp</result>
+			<result name="updateApply_rent_agreement">/apply/apply_rent_agreement.jsp</result>
+			<result name="updateApply_share_agreement">/apply/apply_share_agreement.jsp</result>
+			<result name="updateApply_assignment_agreement">/apply/apply_assignment_agreement.jsp</result>
+			<result name="updateApply_subcontract_agreement">/apply/apply_subcontract_agreement.jsp</result>
+			<result name="updateApply_exchange_agreement">/apply/apply_exchange_agreement.jsp</result>
+			<result name="updateApply_bidSuccess">/apply/apply_bid.jsp</result>
+			<result name="saveApplySuccess">/apply/apply_rent.jsp</result>
+			<result name="viewLandinfoSuccess">/apply/landinfo_view.jsp</result>
+			<result name="viewLandAddressSuccess">/apply/landAddress_view.jsp</result>
+			<result name="updateLandAddressSuccess">/apply/landAddress_update.jsp</result>
+			<result name="saveLandAddressSuccess">landinfo_view.jsp</result>
+			<result name="viewApplierInfoSuccess">/apply/applierInfo_view.jsp</result>
+			<result name="modifyApplierInfoSuccess">/apply/applierInfo_modify.jsp</result>
+			<result name="updateApplierInfoSuccess">/apply/applierInfo_view.jsp</result>
+
+			<result name="viewRightCheckSuccess">/apply/rightinfo_modify.jsp</result>
+			<result name="modifyRightCheckSuccess">/apply/rightinfo_modify.jsp</result>
+			<result name="saveLandRightCheckTypeSuccess">/apply/rightinfo_modify.jsp</result>
+
+			<result name="viewLandWarrantSuccess">/apply/landWarrant_view.jsp</result>
+			<result name="viewLandContractSuccess">/apply/landContract_view.jsp</result>
+			<result name="uploadLandContractSuccess">/apply/landContract_upload.jsp</result>
+
+			<result name="saveLandContractSuccess">/apply/rightinfo_modify.jsp</result>
+			<result name="viewRentContractSuccess">/apply/rentcontract_modify.jsp</result>
+			<result name="previewApplySuccess">/apply/apply_preview.jsp</result>
+			<result name="printApplySuccess">/apply/apply_print.jsp</result>
+
+		</action>
+
+		<action name="Parcel" class="cn.ac.irsa.landcirculation.ParcelAction">
+			<result name="newParcelSuccess">/apply/parcel_add.jsp</result>
+			<result name="saveParcelSuccess">/apply/landinfo_view.jsp</result>
+			<result name="updateParcelSuccess">/apply/parcel_add.jsp</result>
+			<result name="listParcelSuccess">/apply/parcel_list.jsp</result>
+			<result name="deleteParcelSuccess">/apply/parcel_list.jsp</result>
+
+		</action>
+		<action name="LandwarrantImgUpload"
+			class="cn.ac.irsa.landcirculation.LandwarrantImgUploadAction">
+			<result name="uploadLandwarrantImgSuccess">/apply/rightinfo_modify.jsp</result>
+			<result name="error">/common/error.jsp</result>
+		</action>
+
+		<action name="LandcontractImgUpload"
+			class="cn.ac.irsa.landcirculation.LandcontractImgUploadAction">
+			<result name="uploadLandcontractimgSuccess">/apply/rightinfo_modify.jsp</result>
+			<result name="deleteLandcontractimgSuccess">/apply/landContract_view.jsp</result>
+			<result name="previewLandcontractimgSuccess">/apply/landContractImg_preview.jsp</result>
+			<result name="error">/common/error.jsp</result>
+		</action>
+		<action name="TransfereePerson"
+			class="cn.ac.irsa.landcirculation.TransfereePersonAction">
+			<result name="viewTransfereeSuccess">/apply/transfereePerson_modify.jsp</result>
+			<result name="modifyTransfereeSuccess">/apply/transfereePerson_modify.jsp</result>
+			<result name="saveTransfereeSuccess">/apply/transfereePerson_modify.jsp</result>
+			<result name="error">/common/error.jsp</result>
+		</action>
+
+		<action name="Rentcontract" class="cn.ac.irsa.landcirculation.RentcontractAction">
+			<result name="viewRentcontractSuccess">/apply/rentcontract_modify.jsp</result>
+			<result name="modifyRentcontractSuccess">/apply/rentcontract_modify.jsp</result>
+			<result name="saveRentcontractSuccess">/apply/rentcontract_modify.jsp</result>
+			<result name="error">/common/error.jsp</result>
+		</action>
+	</package>
+
+	<package name="reviewApply" extends="commonbasic" namespace="/reviewApply">
+		<action name="ReviewApply" class="cn.ac.irsa.landcirculation.ReviewApplyAction">
+			<result name="listApplysSuccess">/reviewApply/applys_list.jsp</result>
+			<result name="listtoreviewApplys_agreementSuccess">/reviewApply/toreviewApplys_agreement_list.jsp
+			</result>
+			<result name="listtoreviewApplys_bidSuccess">/reviewApply/toreviewApplys_bid_list.jsp
+			</result>
+			<result name="viewApplySuccess">/reviewApply/apply_view.jsp</result>
+			<result name="viewReviewApplySuccess">/reviewApply/reviewApply_view.jsp</result>
+			<result name="updateReviewApplySuccess">/reviewApply/reviewApply_update.jsp</result>
+			<result name="saveReviewApplySuccess">/reviewApply/reviewApply_update.jsp</result>
+		</action>
+	</package>
+	<package name="postApply" extends="commonbasic" namespace="/postApply">
+		<action name="PostApply" class="cn.ac.irsa.landcirculation.PostApplyAction">
+			<result name="listTobepostApplysSuccess">/postApply/tobepostApplys_list.jsp</result>
+			<result name="addPostApplySuccess">/postApply/tobepostApplys_list.jsp</result>
+			<result name="deletePostApplySuccess">/postApply/postApply_update.jsp</result>
+			<result name="updatePostApplySuccess">/postApply/postApply_update.jsp</result>
+			<result name="savePostApplySuccess">/postApply/postApply_update.jsp</result>
+			<result name="previewPostApplySuccess">/postApply/postApply_preview.jsp</result>
+			<result name="publishPostApplySuccess">/postApply/tobepostApplys_list.jsp</result>
+			<result name="listPostedPostApplysSuccess">/postApply/postedPostApplys_list.jsp</result>
+			<result name="listPostingPostApplysSuccess">/postApply/postingPostApplys_list.jsp</result>
+			<result name="previewPostApplySuccess">/postApply/postApply_preview.jsp</result>
+			<result name="previewApplyDetailSuccess">/postApply/applyDetail_preview.jsp</result>
+			<result name="printPostApplySuccess">/postApply/postApply_print.jsp</result>
+			<result name="listPostingPostdetailApplysSuccess">/postApply/postingPostdetailApplys_list.jsp
+			</result>
+			<result name="listToAnnounceApplypostSuccess">/postApply/toAnnouncePostApplys_list.jsp
+			</result>
+			<result name="announceApplypostSuccess">/postApply/announceApplypost.jsp</result>
+
+		</action>
+
+		<action name="ApplypostResponse"
+			class="cn.ac.irsa.landcirculation.ApplypostResponseAction">
+			<result name="addApplypostResponseRecordeSuccesss">/postApply/applyPostResponseRecorde_add.jsp
+			</result>
+			<result name="saveApplypostResponseRecordeSuccess">/postApply/applyPostResponseRecorde_add.jsp
+			</result>
+			<result name="listTodealApplypostResponseSuccess">/postApply/todealApplypostResponse_list.jsp
+			</result>
+			<result name="dealindexApplypostResponseSuccess">/postApply/applypostResponse_dealindex.jsp
+			</result>
+			<result name="dealupdateApplypostResponseSuccess">/postApply/applypostResponse_dealupdate.jsp
+			</result>
+		</action>
+	</package>
+
+	<package name="bid" extends="commonbasic" namespace="/bid">
+		<action name="BidPost" class="cn.ac.irsa.landcirculation.BidPostAction">
+			<result name="CurrenUserpersonIsNull">/user/sessionTimeout.jsp</result>
+			<result name="listTopostBidApplysSuccess">/bid/topostBidApplys_list.jsp</result>
+			<result name="addBidpostSuccess">/bid/topostBidApplys_list.jsp</result>
+			<result name="updateBidpostSuccess">/bid/bidpost_update.jsp</result>
+			<result name="deleteBidpostSuccess">/bid/bidpost_update.jsp</result>
+			<result name="saveBidpostSuccess">/bid/topostBidApplys_list.jsp</result>
+			<result name="previewBidpostSuccess">/bid/bidpost_preview.jsp</result>
+			<result name="previewApplyDetailSuccess">/bid/bidpostDetail_preview.jsp</result>
+			<result name="printBidpostSuccess">/bid/bidpost_print.jsp</result>
+			<result name="listPostingBidpostsSuccess">/bid/postingBidpost_list.jsp</result>
+			<result name="listPostedBidpostsSuccess">/bid/postedBidpost_list.jsp</result>
+			<result name="publishBidpostSuccess">/bid/postedBidpost_list.jsp</result>
+			<result name="listClosedBidpostSuccess">/bid/closedBidpost_list.jsp</result>
+
+		</action>
+		<action name="BidEnroll" class="cn.ac.irsa.landcirculation.BidEnrollAction">
+			<result name="listToenrollBidpostSuccess">/bid/toenrollBidpost_list.jsp</result>
+			<result name="preenrollBidpostSuccess">/bid/bidenroll_prenew.jsp</result>
+			<result name="enrollBidpostSuccess">/bid/bidenroll_new.jsp</result>
+			<result name="modifyBidderPicinfoSuccess">/bid/bidderPicinfo_modify.jsp</result>
+			<result name="updateBidderPicinfoSuccess">/bid/bidenroll_prenew.jsp</result>
+			<result name="listMyEnrollingBidenrollSuccess">/bid/myEnrollingBidenroll_list.jsp</result>
+			<result name="listMyEnrolledBidenrollSuccess">/bid/myEnrolledBidenroll_list.jsp</result>
+			<result name="listToreviewBidenrollSuccess">/bid/toreviewBidenroll_list.jsp</result>
+			<result name="reviewBidenrollSuccess">/bid/reviewBidenroll_index.jsp</result>
+			<result name="viewBidenrollSuccess">/bid/bidenroll_view.jsp</result>
+			<result name="updateReviewBidenrollSuccess">/bid/reviewBidenroll_update.jsp</result>
+
+		</action>
+		<action name="BidTender" class="cn.ac.irsa.landcirculation.BidTenderAction">
+			<result name="listTotenderBidenrollSuccess">/bid/totenderBidenroll_list.jsp</result>
+			<result name="modifyBidtenderSuccess">/bid/bidtender_modify.jsp</result>
+			<result name="updateBidtenderSuccess">/bid/bidtender_update.jsp</result>
+			<result name="viewBidtenderSuccess">/bid/bidtender_view.jsp</result>
+
+		</action>
+		<action name="BidtenderdocUpload"
+			class="cn.ac.irsa.landcirculation.BidtenderdocUploadAction">
+			<result name="uploadBidtenderdocSuccess">/bid/bidtender_update.jsp</result>
+		</action>
+		<action name="BidOpen" class="cn.ac.irsa.landcirculation.BidopenAction">
+			<result name="listToopenBidpostSuccess">/bid/toopenBidpost_list.jsp</result>
+			<result name="listToopenBidtenderSuccess">/bid/toopenBidtender_list.jsp</result>
+			<result name="updateBidtenderReviewSuccess">/bid/reviewBidtender_update.jsp</result>
+			<result name="reviewBidtenderSuccess">/bid/reviewBidtender_index.jsp</result>
+		</action>
+		<action name="BidClose" class="cn.ac.irsa.landcirculation.BidcloseAction">
+			<result name="listTocloseBidpostSuccess">/bid/tocloseBidpost_list.jsp</result>
+			<result name="listTocloseBidtenderSuccess">/bid/tocloseBidtender_list.jsp</result>
+		</action>
+		<action name="Bidwinnerpost" class="cn.ac.irsa.landcirculation.BidwinnerpostAction">
+			<result name="previewBidwinnerpostSuccess">/bid/bidwinnerpost_preview.jsp</result>
+			<result name="printBidwinnerpostSuccess">/bid/bidwinnerpost_print.jsp</result>
+		</action>
+	</package>
+	<package name="Contract" extends="commonbasic" namespace="/contract">
+		<action name="ContractSign" class="cn.ac.irsa.landcirculation.ContractSignAction">
+			<result name="listtosignContractApplys_agreementSuccess">/contract/tosignContractApplys_agreement_list.jsp
+			</result>
+			<result name="listtosignContractApplys_bidSuccess">/contract/tosignContractApplys_bid_list.jsp
+			</result>
+			<result name="newContract_rentSuccess">/contract/contract_rent_update.jsp</result>
+			<result name="listtoreviewContractApplysSuccess">/contract/toreviewContractApplys_list.jsp
+			</result>
+			<result name="reviewContractSuccess">/contract/reviewContract_index.jsp
+			</result>
+			<result name="updateReviewContractSuccess">/contract/reviewContract_update.jsp
+			</result>
+			<result name="previewContract_rentSuccess">/contract/contract_rent_preview.jsp
+			</result>
+			<result name="previewContract_shareSuccess">/contract/contract_share_preview.jsp
+			</result>
+			<result name="previewContract_assignSuccess">/contract/contract_assign_preview.jsp
+			</result>
+			<result name="previewContract_subcontractSuccess">/contract/contract_subcontract_preview.jsp
+			</result>
+			<result name="previewContract_exchangeSuccess">/contract/contract_exchange_preview.jsp
+			</result>
+			<result name="listtoprintContractApplysSuccess">/contract/toprintContractApplys_list.jsp
+			</result>
+			<result name="listtofillingContractApplysSuccess">/contract/tofillingContractApplys_list.jsp
+			</result>
+			<result name="fillingContractSuccess">/contract/contractFilling_index.jsp
+			</result>
+			<result name="listtoreviewContractfillingApplysSuccess">/contract/toreviewContractfillingApplys_list.jsp
+			</result>
+			<result name="viewContractfillingSuccess">/contract/contractfilling_view.jsp
+			</result>
+			<result name="uploadContractfillingimgsSuccess">/contract/contractfillingimg_upload_index.jsp
+			</result>
+			<result name="reviewContractfillingSuccess">/contract/reviewContractfilling_index.jsp
+			</result>
+			<result name="updateReviewContractfillingSuccess">/contract/reviewContractfilling_update.jsp
+			</result>
+
+		</action>
+		<action name="ContractRent" class="cn.ac.irsa.landcirculation.ContractRentAction">
+			<result name="viewContract_rent0Success">/contract/contract_rent0_view.jsp</result>
+			<result name="viewContract_rent1Success">/contract/contract_rent1_view.jsp</result>
+			<result name="viewContract_rent2Success">/contract/contract_rent2_view.jsp</result>
+			<result name="viewContract_rent3Success">/contract/contract_rent3_view.jsp</result>
+			<result name="viewContract_rent4Success">/contract/contract_rent4_view.jsp</result>
+			<result name="viewContract_rent5Success">/contract/contract_rent5_view.jsp</result>
+			<result name="viewContract_rent6Success">/contract/contract_rent6_view.jsp</result>
+			<result name="viewContract_rent7Success">/contract/contract_rent7_view.jsp</result>
+			<result name="viewContract_rent8Success">/contract/contract_rent8_view.jsp</result>
+			<result name="viewContract_rent9Success">/contract/contract_rent9_view.jsp</result>
+			<result name="viewContract_rent10Success">/contract/contract_rent10_view.jsp</result>
+			<result name="viewContract_rent11Success">/contract/contract_rent11_view.jsp</result>
+			<result name="viewContract_rent12Success">/contract/contract_rent12_view.jsp</result>
+			<result name="viewContract_rent13Success">/contract/contract_rent13_view.jsp</result>
+			<result name="printContract_rentSuccess">/contract/contract_rent_preview.jsp</result>
+			<result name="printContract_rentSuccess">/contract/contract_rent_preview.jsp</result>
+		</action>
+		<action name="ContractfillingimgUpload"
+			class="cn.ac.irsa.landcirculation.ContractfillingimgUploadAction">
+			<result name="addContractfillingimgSuccess">/contract/contractfillingimg_add.jsp</result>
+			<result name="listContractfillingimgsSuccess">/contract/contractfillingimgs_list.jsp</result>
+			<result name="previewContractfillingimgsSuccess">/contract/contractfillingimgs_preview.jsp
+			</result>
+		</action>
+	</package>
+	<package name="CirculationDemand" extends="commonbasic"
+		namespace="/circulationDemand">
+		<action name="CirculationDemand"
+			class="cn.ac.irsa.landcirculation.CirculationDemandAction">
+			<result name="listtoeditCirculationDemandSuccess">/circulationDemand/toeditCirculationDemand_list.jsp
+			</result>
+			<result name="modifyCirculationDemandSuccess">/circulationDemand/circulationDemand_update.jsp
+			</result>
+			<result name="updateCirculationDemandSuccess">/circulationDemand/circulationDemand_view.jsp
+			</result>
+			<result name="previewCirculationDemandSuccess">/circulationDemand/circulationDemand_preview.jsp
+			</result>
+		</action>
+	</package>
+	<package name="Admin" extends="commonbasic" namespace="/admin">
+		<action name="ActionGroupCode" class="cn.ac.irsa.landcirculation.ActionGroupCodeAction">
+			<result type="json">
+				<param name="root">lstActionGroupCode</param>
+			</result>
+		</action>
+	</package>
+	<package name="Supervision" extends="commonbasic" namespace="/supervision">
+		<action name="Conpensation" class="cn.ac.irsa.landcirculation.ConpensationAction">
+			<result name="listtoconpensationContractSuccess">/supervision/toconpensateContract_list.jsp
+			</result>
+			<result name="modifyConpensationRecordSuccess">/supervision/conpensationRecord_modify_index.jsp
+			</result>
+			<result name="viewConpensationRecordSuccess">/supervision/conpensationRecord_view.jsp
+			</result>
+			<result name="viewConpensationContractSuccess">/supervision/conpensationContract_view.jsp
+			</result>
+		</action>
+	</package>
+</struts>

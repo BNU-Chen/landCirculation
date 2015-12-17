@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.PostdetailApply" table="postdetail_apply" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="postApply" class="cn.ac.irsa.landcirculation.PostApply" fetch="select">
+            <column name="postId" />
+        </many-to-one>
+        <many-to-one name="apply" class="cn.ac.irsa.landcirculation.Apply" fetch="select">
+            <column name="applyId" />
+        </many-to-one>
+        <property name="applierName" type="string">
+            <column name="applierName" length="20" />
+        </property>
+        <property name="applierIdcode" type="string">
+            <column name="applierIdcode" length="18" />
+        </property>
+        <property name="landAddress" type="string">
+            <column name="landAddress" length="45" />
+        </property>
+        <property name="rightAuthType" type="java.lang.Integer">
+            <column name="rightAuthType" />
+        </property>
+        <property name="landwarrantCode" type="string">
+            <column name="landwarrantCode" length="20" />
+        </property>
+        <property name="landcontractCode" type="string">
+            <column name="landcontractCode" length="20" />
+        </property>
+        <property name="landRgArea" type="java.lang.Double">
+            <column name="landRgArea" precision="22" scale="0" />
+        </property>
+        <property name="paddyfeildRgArea" type="java.lang.Double">
+            <column name="paddyfeildRgArea" precision="22" scale="0" />
+        </property>
+        <property name="drylandRgArea" type="java.lang.Double">
+            <column name="drylandRgArea" precision="22" scale="0" />
+        </property>
+        <property name="responseNumber" type="java.lang.Integer">
+            <column name="responseNumber" />
+        </property>
+        <property name="propertreatNumber" type="java.lang.Integer">
+            <column name="propertreatNumber" />
+        </property>
+        <property name="objectionNumber" type="java.lang.Integer">
+            <column name="objectionNumber" />
+        </property>
+        <property name="nottreatNumber" type="java.lang.Integer">
+            <column name="nottreatNumber" />
+        </property>
+        <property name="resultCode" type="string">
+            <column name="resultCode" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

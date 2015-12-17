@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Bidpost" table="bidpost" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userPerson" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="posterId" />
+        </many-to-one>
+        <property name="posterName" type="string">
+            <column name="posterName" length="20" />
+        </property>
+        <property name="postNo" type="string">
+            <column name="postNo" length="18" />
+        </property>
+        <property name="publishDate" type="date">
+            <column name="publishDate" length="10" />
+        </property>
+        <property name="bidType" type="string">
+            <column name="bidType" length="2" />
+        </property>
+        <property name="bidTypename" type="string">
+            <column name="bidTypename" />
+        </property>
+        <property name="landRgArea" type="java.lang.Double">
+            <column name="landRgArea" precision="10" scale="3" />
+        </property>
+        <property name="drylandRgArea" type="java.lang.Double">
+            <column name="drylandRgArea" precision="10" scale="3" />
+        </property>
+        <property name="paddyfieldRgArea" type="java.lang.Double">
+            <column name="paddyfieldRgArea" precision="10" scale="3" />
+        </property>
+        <property name="drylandBaseprice" type="java.lang.Long">
+            <column name="drylandBaseprice" precision="10" scale="0" />
+        </property>
+        <property name="paddyfieldBaseprice" type="java.lang.Long">
+            <column name="paddyfieldBaseprice" precision="10" scale="0" />
+        </property>
+        <property name="deposit" type="java.lang.Long">
+            <column name="deposit" precision="10" scale="0" />
+        </property>
+        <property name="applyStartDate" type="date">
+            <column name="applyStartDate" length="10" />
+        </property>
+        <property name="applyEndDate" type="date">
+            <column name="applyEndDate" length="10" />
+        </property>
+        <property name="bidDate" type="timestamp">
+            <column name="bidDate" length="19" />
+        </property>
+        <property name="picName" type="string">
+            <column name="picName" length="20" />
+        </property>
+        <property name="picTel" type="java.lang.Long">
+            <column name="picTel" precision="11" scale="0" />
+        </property>
+        <property name="picEmail" type="string">
+            <column name="picEmail" length="45" />
+        </property>
+        <property name="picAddress" type="string">
+            <column name="picAddress" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="2" />
+        </property>
+        <set name="bidenrolls" table="bidenroll" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bidpostId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Bidenroll" />
+        </set>
+        <set name="bidtenders" table="bidtender" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bidpostId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Bidtender" />
+        </set>
+        <set name="bidpostDetails" table="bidpost_detail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bidpostId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.BidpostDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

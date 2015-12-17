@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+body {
+	background: #EEE;
+	width: 714px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.A4 {
+	background: #CCC;
+	width: 714px;
+	height: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+table {
+	background: #FFF;
+	border-top: 0px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 0px solid #000;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+td {
+	border-top: 1px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-left: 1px solid #000;
+	line-height: 15px;
+	vertical-align: middle;
+	font-size: 12px;
+	min-height: 30px;
+	text-align: center;
+	word-break: break-all;
+}
+
+.emtd {
+	border-top: 1px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-left: 1px solid #000;
+	line-height: 15px;
+	vertical-align: middle;
+	font-size: 12px;
+	font-weight: bold;
+	min-height: 30px;
+	text-align: center;
+	word-break: break-all;
+}
+
+.title {
+	font: bolder 24px "宋体";
+	color: #000;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	border-style: none;
+	text-align: center;
+}
+
+.title2 {
+	font: 15px "宋体";
+	color: #000;
+	height: 15px;
+	text-align: right;
+	vertical-align: middle;
+	border-top: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-right: 0px solid #000;
+	border-left: 0px solid #000;
+	height: 15px;
+	text-align: right;
+	vertical-align: middle;
+	border-top: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-right: 0px solid #000;
+	border-left: 0px solid #000;
+}
+
+.tablenoborder {
+	border-style: none;
+	text-align: center;
+}
+
+.tablenoborder td {
+	border-style: none;
+	text-align: center;
+}
+
+.tdleft0 {
+	border-left: 0px none #000;
+}
+
+.tdtop0 {
+	border-top: 0px none #000;
+}
+
+.tablebottom0 {
+	border-bottom: 0px none #000;
+}
+
+.tableright0 {
+	border-right: 0px none #000;
+}

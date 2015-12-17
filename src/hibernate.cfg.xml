@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="landCirculation">
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">noroot</property>
+        <property name="hibernate.connection.pool_size">2</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mysql_land_circulation</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="cn/ac/irsa/landcirculation/UserRole.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ContractSubcontract.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/BidpostDetail.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/CirculationDemand.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/CodeCity.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ApplypostResponse.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Bidpost.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Stepdef.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Bidtender.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/PostApply.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Rtnmsgdef.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Landcontractimg.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ContractAssignment.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Parcel.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Statusdef.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ReviewApply.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ProvinceCode.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/RoleCode.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Contractfilling.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ContractRent.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/CodeTown.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Status.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/TransfereePerson.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/TransfereeCompany.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/UserPerson.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Bidenroll.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/CodeProvince.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ActionGroupCode.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Rentcontract.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Contractfillingimg.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Landwarrant.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/CodeCounty.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/PostdetailApply.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Apply.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ContractExchange.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Bidwinnerpost.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ReviewUserperson.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ContractShare.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ConpensationRecord.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ContractBase.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Applystatus.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/CodeVillage.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/ActionList.hbm.xml" />
+        <mapping resource="cn/ac/irsa/landcirculation/Flowdef.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

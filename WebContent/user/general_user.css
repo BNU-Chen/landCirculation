@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+body {
+	margin: 0px 0px;
+}
+
+a:link {
+	color: #06F;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #F00;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F00;
+	text-decoration: none;
+}
+
+a:active {
+	color: #F00;
+}
+
+#wrap {
+	margin: 0px auto;
+	width: 100%;
+	background: #EEE;
+	font-size: 14px;
+}
+
+#title {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFF;
+	background: #F00;
+}
+
+#navi {
+	width: 100% -5px;
+	background: #ccc;
+	height: 100%;
+	background: #DDD;
+	height: 100%;
+	margin: 0px 0px;
+}
+
+#client {
+	width: 100%;
+	height: 100%;
+	min-height: 150px;
+	background: #EEE;
+}
+
+table {
+	margin: 0px;
+	border-top: 1px dotted #3CF;
+	border-right: 1px dotted #3CF;
+}
+
+td {
+	height: 30px;
+	border-bottom: 1px dotted #3CF;
+	border-left: 1px dotted #3CF;
+	font-size: 14px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-indent: 0px;
+}
+
+.navitable {
+	width: 99.5%;
+	margin: 0px 0px;
+	border-width: 0px;
+}
+
+.navitable td {
+	min-height: 40px;
+	border-bottom: 0px dotted #3CF;
+	border-right: 0px dotted #3CF;
+	font-size: 14px;
+	line-height: 20px;
+	vertical-align: middle;
+	background: #CCC;
+	text-indent: 0px;
+}
+
+.navitable tr:hover {
+	background: #CCC;
+}
+
+#naviItemBig {
+	height: 40px;
+	min-width: 333px;
+	display: inline-block;
+	position: relative;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 16px;
+	background: #CCC;
+	border: 1px solid #FFF;
+	margin: 1px -3px;
+}
+
+#naviItemBig:hover {
+	background: #FC0;
+	text-decoration: none;
+	border: 1px solid #FFF;
+	text-decoration: none;
+}
+
+#naviItemMini {
+	height: 40px;
+	min-width: 80px;
+	display: inline-block;
+	position: relative;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 16px;
+	background: #CCC;
+	border: 1px solid #FFF;
+	margin: 1px -3px;
+}
+
+#naviItemMini:hover {
+	background: #FC0;
+	text-decoration: none;
+	border: 1px solid #FFF;
+	text-decoration: none;
+}
+
+#wrap #toolbar {
+	background: #AAA;
+	margin: 0px 0px;
+	height: 40px;
+}
+
+.tablenoborder {
+	margin: 0px;
+	border-top: 0px dotted #3CF;
+	border-right: 0px dotted #3CF;
+}
+
+.tablenoborder td {
+	height: 30px;
+	border-bottom: 0px dotted #3CF;
+	border-left: 0px dotted #3CF;
+	font-size: 14px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-indent: 0px;
+}
+
+.msgtable {
+	width: 99.5%;
+	margin: 0px 0px;
+	border-width: 0px;
+}
+
+.msgtable td {
+	height: 30px;
+	border-bottom: 0px dotted #3CF;
+	border-left: 0px dotted #3CF;
+	font-size: 18px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-indent: 0px;
+}
+
+#dlg {
+	background: #EEE;
+	border: 2px solid #666;
+	position: absolute;
+	display: none;
+}
+
+#dlgClient {
+	background: #DDD;
+}
+
+#dlgOperation {
+	background: #333;
+	border: 1px solid #888;
+}
+
+#toc {
+	width: 100%;
+	height: 32px;
+	margin: 0px;
+	border-bottom: 2px solid #F00;
+}
+
+#toc td {
+	border-bottom: 1px solid #F00;
+}
+
+#toc label {
+	color: black;
+	height: 30px;
+	min-width: 60px;
+	margin: 0px;
+	padding: 0px 10px;
+	text-align: center;
+}
+
+#toc label:hover {
+	background: #FC0;
+	text-decoration: none;
+}
+
+#toc label:active {
+	background: #F00;
+}
+
+label {
+	font-size: 14px;
+	mini-width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+	display: block;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+span {
+	color: #F00;
+	height: 30px;
+	font-size: 14px;
+	line-height: 28px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.selected {
+	background: #F00;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+.alignright {
+	text-align: right;
+}
+
+textarea {
+	min-width: 500px;
+}

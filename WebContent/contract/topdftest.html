@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<link href="general_user.css" rel="stylesheet" type="text/css" />
+<script src="general.js" type="text/javascript"></script>
+<script language="JavaScript">
+	function stop() { //这个是禁用鼠标右键 
+		return false;
+	}
+	document.oncontextmenu = stop;
+	function submitForm() {
+		document.getElementById("btRegist").click();
+	}
+	function showTabpane(cursel) {
+		/* 		var panels = document.getElementById("client").getElementsByClassName(
+		 "panel"); */
+		var panels = document.getElementsByClassName("panel");
+		var tabs = document.getElementById("toc").getElementsByTagName("label");
+		// 		alert(cursel + "\n" + tabs.length);
+		for ( var i = 0; i < tabs.length; i++) {
+			panels[i].style.display = "block";
+			if (i == cursel) {
+				tabs.item(i).className = "selected";
+				/* panels.item(i).style.display = "block"; */
+				panels[i].style.display = "block";
+				var str = "btnSubmit" + String(i + 1);
+				//alert(str);
+				//document.getElementById(str).click();
+			} else {
+				tabs.item(i).className = "";
+				/* 				panels.item(i).style.display = "none"; */
+				panels[i].style.display = "none";
+			}
+
+		}
+	}}
+</script>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet"
+	type="text/css" />
+<link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet"
+	type="text/css" />
+<link href="SpryAssets/SpryValidationConfirm.css" rel="stylesheet"
+	type="text/css" />
+<script src="SpryAssets/SpryValidationTextField.js"
+	type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationPassword.js"
+	type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationConfirm.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<p>
+		<span style="font-size: 12.0pt; font-family: MS Mincho">刘纯波</span> <span
+			style="font-size: 12.0pt; font-family: Times New Roman, serif">(Broken
+			Sword),</span> <span style="font-size: 12.0pt; font-family: MS Mincho">秦王殘劍</span>
+		<span style="font-size: 12.0pt; font-family: Times New Roman, serif">(Flying
+			Snow),</span> <span style="font-size: 12.0pt; font-family: MS Mincho">飛雪</span>
+		<span style="font-size: 12.0pt; font-family: Times New Roman, serif">(Moon),
+		</span> <span style="font-size: 12.0pt; font-family: MS Mincho">如月</span> <span
+			style="font-size: 12.0pt; font-family: Times New Roman, serif">(the
+			King), and</span> <span style="font-size: 12.0pt; font-family: MS Mincho">秦王</span>
+		<span style="font-size: 12.0pt; font-family: Times New Roman, serif">(Sky).</span>
+	</p>
+</body>
+</html>

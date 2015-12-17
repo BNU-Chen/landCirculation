@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-11 16:45:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Originalcontractwarrant" table="originalcontractwarrant" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="warrantCode" type="string">
+            <column name="warrantCode" length="23" not-null="true" />
+        </property>
+        <property name="warrantImgPathname12" type="string">
+            <column name="warrantImgPathname12" />
+        </property>
+        <property name="warrantImgPathname34" type="string">
+            <column name="warrantImgPathname34" />
+        </property>
+        <property name="warrantImgPathname56" type="string">
+            <column name="warrantImgPathname56" />
+        </property>
+        <property name="warrantImgPathname78" type="string">
+            <column name="warrantImgPathname78" />
+        </property>
+        <property name="warrantImgPathname90" type="string">
+            <column name="warrantImgPathname90" />
+        </property>
+        <set name="applies" table="apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="originalContractWarrantId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Apply" />
+        </set>
+    </class>
+</hibernate-mapping>

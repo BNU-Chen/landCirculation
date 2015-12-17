@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Contractfillingimg" table="contractfillingimg" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="contractfilling" class="cn.ac.irsa.landcirculation.Contractfilling" fetch="select">
+            <column name="contractfillingId" />
+        </many-to-one>
+        <property name="contractNo" type="string">
+            <column name="contractNo" length="18" />
+        </property>
+        <property name="contractfillingimgPathFilename" type="string">
+            <column name="contractfillingimgPathFilename" />
+        </property>
+        <property name="contractfillingimgSn" type="java.lang.Integer">
+            <column name="contractfillingimgSn" />
+        </property>
+    </class>
+</hibernate-mapping>

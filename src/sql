@@ -1,0 +1,8 @@
+select code_city.name into landCityName from code_city where code_city.code=new.landCity;
+set new.landCityName=landCityName;
+select code_county.name into landCountyName from code_county where code_county.code=new.landCounty;
+set new.landCountyName=landCountyName;
+select code_town.name into landTownName from code_town where code_town.code=new.landTown;
+set new.landTownName=landTownName;
+select code_village.name into landVillageName from code_village where code_village.code=new.landVillage;
+set new.landVillageName=landVillageName;

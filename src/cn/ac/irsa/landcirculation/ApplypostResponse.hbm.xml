@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.ApplypostResponse" table="applypost_response" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="postApply" class="cn.ac.irsa.landcirculation.PostApply" fetch="select">
+            <column name="postApplyId" />
+        </many-to-one>
+        <many-to-one name="userPersonByRecorderId" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="recorderId" />
+        </many-to-one>
+        <many-to-one name="apply" class="cn.ac.irsa.landcirculation.Apply" fetch="select">
+            <column name="applyId" />
+        </many-to-one>
+        <many-to-one name="userPersonByDealerId" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="dealerId" />
+        </many-to-one>
+        <property name="question" type="string">
+            <column name="question" length="200" />
+        </property>
+        <property name="responserName" type="string">
+            <column name="responserName" length="10" />
+        </property>
+        <property name="responserIdcode" type="string">
+            <column name="responserIdcode" length="18" />
+        </property>
+        <property name="responserTel" type="string">
+            <column name="responserTel" length="11" />
+        </property>
+        <property name="responserEmail" type="string">
+            <column name="responserEmail" length="45" />
+        </property>
+        <property name="responserAddress" type="string">
+            <column name="responserAddress" length="45" />
+        </property>
+        <property name="dealType" type="string">
+            <column name="dealType" length="2" />
+        </property>
+        <property name="dealComment" type="string">
+            <column name="dealComment" />
+        </property>
+    </class>
+</hibernate-mapping>

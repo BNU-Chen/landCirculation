@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Apply" table="apply" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="landwarrant" class="cn.ac.irsa.landcirculation.Landwarrant" fetch="select">
+            <column name="landWarrantId" />
+        </many-to-one>
+        <many-to-one name="userPerson" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="applierId" />
+        </many-to-one>
+        <many-to-one name="stepdef" class="cn.ac.irsa.landcirculation.Stepdef" fetch="select">
+            <column name="currentStepId" />
+        </many-to-one>
+        <many-to-one name="flowdef" class="cn.ac.irsa.landcirculation.Flowdef" fetch="select">
+            <column name="flowDefId" />
+        </many-to-one>
+        <many-to-one name="rtnmsgdef" class="cn.ac.irsa.landcirculation.Rtnmsgdef" fetch="select">
+            <column name="currentMsgId" />
+        </many-to-one>
+        <many-to-one name="statusdef" class="cn.ac.irsa.landcirculation.Statusdef" fetch="select">
+            <column name="currentStatusId" />
+        </many-to-one>
+        <property name="transferType" type="string">
+            <column name="transferType" length="1" />
+        </property>
+        <property name="transferTypeName" type="string">
+            <column name="transferTypeName" length="20" />
+        </property>
+        <property name="applyCode" type="string">
+            <column name="applyCode" length="16" />
+        </property>
+        <property name="applyDate" type="date">
+            <column name="applyDate" length="10" />
+        </property>
+        <property name="applierUserName" type="string">
+            <column name="applierUserName" length="20" />
+        </property>
+        <property name="applierIdcode" type="string">
+            <column name="applierIDCode" />
+        </property>
+        <property name="picIdcode" type="string">
+            <column name="picIDCode" length="18" />
+        </property>
+        <property name="picName" type="string">
+            <column name="picName" length="20" />
+        </property>
+        <property name="picTel" type="string">
+            <column name="picTel" length="11" />
+        </property>
+        <property name="picEmail" type="string">
+            <column name="picEmail" />
+        </property>
+        <property name="picAddress" type="string">
+            <column name="picAddress" />
+        </property>
+        <property name="tranferReason" type="string">
+            <column name="tranferReason" />
+        </property>
+        <property name="tranferEconomicbkground" type="string">
+            <column name="tranferEconomicbkground" />
+        </property>
+        <property name="landProvince" type="string">
+            <column name="landProvince" length="15" />
+        </property>
+        <property name="landProvinceName" type="string">
+            <column name="landProvinceName" />
+        </property>
+        <property name="landCity" type="string">
+            <column name="landCity" length="15" />
+        </property>
+        <property name="landCityName" type="string">
+            <column name="landCityName" />
+        </property>
+        <property name="landCounty" type="string">
+            <column name="landCounty" length="15" />
+        </property>
+        <property name="landCountyName" type="string">
+            <column name="landCountyName" />
+        </property>
+        <property name="landTown" type="string">
+            <column name="landTown" length="15" />
+        </property>
+        <property name="landTownName" type="string">
+            <column name="landTownName" />
+        </property>
+        <property name="landVillage" type="string">
+            <column name="landVillage" length="15" />
+        </property>
+        <property name="landVillageName" type="string">
+            <column name="landVillageName" />
+        </property>
+        <property name="landGroup" type="string">
+            <column name="landGroup" length="15" />
+        </property>
+        <property name="landAddress" type="string">
+            <column name="landAddress" />
+        </property>
+        <property name="landRegionCode" type="string">
+            <column name="landRegionCode" length="15" />
+        </property>
+        <property name="landRgArea" type="java.lang.Double">
+            <column name="landRgArea" precision="22" scale="0" />
+        </property>
+        <property name="paddyfieldRgArea" type="java.lang.Double">
+            <column name="paddyfieldRgArea" precision="22" scale="0" />
+        </property>
+        <property name="drylandRgArea" type="java.lang.Double">
+            <column name="drylandRgArea" precision="22" scale="0" />
+        </property>
+        <property name="landRealArea" type="java.lang.Double">
+            <column name="landRealArea" precision="22" scale="0" />
+        </property>
+        <property name="paddyfieldRealArea" type="java.lang.Double">
+            <column name="paddyfieldRealArea" precision="22" scale="0" />
+        </property>
+        <property name="drylandRealArea" type="java.lang.Double">
+            <column name="drylandRealArea" precision="22" scale="0" />
+        </property>
+        <property name="landNumber" type="java.lang.Integer">
+            <column name="landNumber" />
+        </property>
+        <property name="rightAuthType" type="java.lang.Integer">
+            <column name="rightAuthType" />
+        </property>
+        <property name="landWarrantCode" type="string">
+            <column name="landWarrantCode" length="23" />
+        </property>
+        <property name="landContractCode" type="string">
+            <column name="landContractCode" length="23" />
+        </property>
+        <property name="circulationType" type="string">
+            <column name="circulationType" length="2" />
+        </property>
+        <property name="circulationTypeName" type="string">
+            <column name="circulationTypeName" length="20" />
+        </property>
+        <property name="userType" type="string">
+            <column name="userType" length="2" />
+        </property>
+        <set name="applypostResponses" table="applypost_response" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ApplypostResponse" />
+        </set>
+        <set name="postdetailApplies" table="postdetail_apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.PostdetailApply" />
+        </set>
+        <set name="landcontractimgs" table="landcontractimg" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Landcontractimg" />
+        </set>
+        <set name="parcels" table="parcel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applicationId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Parcel" />
+        </set>
+        <set name="rentcontracts" table="rentcontract" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Rentcontract" />
+        </set>
+        <set name="contractfillings" table="contractfilling" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ApplyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Contractfilling" />
+        </set>
+        <set name="contractBases" table="contract_base" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ApplyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ContractBase" />
+        </set>
+        <set name="reviewApplies" table="review_apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ReviewApply" />
+        </set>
+        <set name="bidpostDetails" table="bidpost_detail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="applyId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.BidpostDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Contractfilling" table="contractfilling" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="apply" class="cn.ac.irsa.landcirculation.Apply" fetch="select">
+            <column name="ApplyId" />
+        </many-to-one>
+        <property name="contractfillingNo" type="string">
+            <column name="contractfillingNo" length="18" />
+        </property>
+        <property name="fillingDate" type="date">
+            <column name="fillingDate" length="10" />
+        </property>
+        <property name="contractNo" type="string">
+            <column name="contractNo" length="18" />
+        </property>
+        <property name="circulationType" type="string">
+            <column name="circulationType" length="2" />
+        </property>
+        <property name="circulationTypeName" type="string">
+            <column name="circulationTypeName" length="20" />
+        </property>
+        <property name="transferType" type="string">
+            <column name="transferType" length="1" />
+        </property>
+        <property name="fromDate" type="timestamp">
+            <column name="fromDate" length="19" />
+        </property>
+        <property name="toDate" type="timestamp">
+            <column name="toDate" length="19" />
+        </property>
+        <property name="transferId" type="java.lang.Integer">
+            <column name="transferId" />
+        </property>
+        <property name="transferIdcode" type="string">
+            <column name="transferIdcode" length="18" />
+        </property>
+        <property name="transferName" type="string">
+            <column name="transferName" length="20" />
+        </property>
+        <property name="transferAddress" type="string">
+            <column name="transferAddress" />
+        </property>
+        <property name="transferTel" type="string">
+            <column name="transferTel" length="11" />
+        </property>
+        <property name="transferEmail" type="string">
+            <column name="transferEmail" />
+        </property>
+        <property name="transfeeId" type="java.lang.Integer">
+            <column name="transfeeId" />
+        </property>
+        <property name="transfeeIdcode" type="string">
+            <column name="transfeeIdcode" length="18" />
+        </property>
+        <property name="transfeeName" type="string">
+            <column name="transfeeName" length="20" />
+        </property>
+        <property name="transfeeAddress" type="string">
+            <column name="transfeeAddress" />
+        </property>
+        <property name="transfeeTel" type="string">
+            <column name="transfeeTel" length="11" />
+        </property>
+        <property name="transfeeEmail" type="string">
+            <column name="transfeeEmail" />
+        </property>
+        <property name="landArea" type="java.lang.Double">
+            <column name="landArea" precision="255" scale="3" />
+        </property>
+        <property name="drylandArea" type="java.lang.Double">
+            <column name="drylandArea" precision="255" scale="3" />
+        </property>
+        <property name="paddyfieldArea" type="java.lang.Double">
+            <column name="paddyfieldArea" precision="255" scale="3" />
+        </property>
+        <property name="payType" type="java.lang.Integer">
+            <column name="payType" />
+        </property>
+        <property name="payType11" type="java.lang.Integer">
+            <column name="payType11" />
+        </property>
+        <property name="payType12" type="java.lang.Integer">
+            <column name="payType12" />
+        </property>
+        <property name="payType13string" type="string">
+            <column name="payType13String" />
+        </property>
+        <property name="payType13" type="java.lang.Long">
+            <column name="payType13" />
+        </property>
+        <property name="payType14" type="java.lang.Integer">
+            <column name="payType14" />
+        </property>
+        <property name="payType21" type="java.lang.Integer">
+            <column name="payType21" />
+        </property>
+        <property name="payType22" type="java.lang.Integer">
+            <column name="payType22" />
+        </property>
+        <property name="payType22name" type="string">
+            <column name="payType22Name" length="5" />
+        </property>
+        <property name="payType23" type="java.lang.Long">
+            <column name="payType23" />
+        </property>
+        <property name="payType24" type="java.lang.Integer">
+            <column name="payType24" />
+        </property>
+        <property name="payType25" type="java.lang.Integer">
+            <column name="payType25" />
+        </property>
+        <property name="payType25name" type="string">
+            <column name="payType25Name" length="5" />
+        </property>
+        <property name="payType26" type="java.lang.Long">
+            <column name="payType26" />
+        </property>
+        <property name="payType27" type="java.lang.Integer">
+            <column name="payType27" />
+        </property>
+        <property name="payType31" type="string">
+            <column name="payType31" length="200" />
+        </property>
+        <property name="reviewResult" type="string">
+            <column name="reviewResult" length="2" />
+        </property>
+        <property name="reviewComment" type="string">
+            <column name="reviewComment" />
+        </property>
+        <property name="approvedDate" type="timestamp">
+            <column name="approvedDate" length="19" />
+        </property>
+        <property name="reviewerId" type="java.lang.Integer">
+            <column name="reviewerId" />
+        </property>
+        <property name="reviewerIdcode" type="string">
+            <column name="reviewerIdcode" length="18" />
+        </property>
+        <property name="reviewerName" type="string">
+            <column name="reviewerName" />
+        </property>
+        <property name="landAddressCode" type="string">
+            <column name="landAddressCode" length="15" />
+        </property>
+        <property name="landAddressName" type="string">
+            <column name="landAddressName" />
+        </property>
+        <property name="landProvinceCode" type="string">
+            <column name="landProvinceCode" length="2" />
+        </property>
+        <property name="landProvinceName" type="string">
+            <column name="landProvinceName" />
+        </property>
+        <property name="landCityCode" type="string">
+            <column name="landCityCode" length="4" />
+        </property>
+        <property name="landCityName" type="string">
+            <column name="landCityName" />
+        </property>
+        <property name="landCountyCode" type="string">
+            <column name="landCountyCode" length="6" />
+        </property>
+        <property name="landCountyName" type="string">
+            <column name="landCountyName" />
+        </property>
+        <property name="landTownCode" type="string">
+            <column name="landTownCode" length="9" />
+        </property>
+        <property name="landTownName" type="string">
+            <column name="landTownName" />
+        </property>
+        <property name="landVillageCode" type="string">
+            <column name="landVillageCode" length="12" />
+        </property>
+        <property name="landVillageName" type="string">
+            <column name="landVillageName" />
+        </property>
+        <set name="contractfillingimgs" table="contractfillingimg" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contractfillingId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Contractfillingimg" />
+        </set>
+    </class>
+</hibernate-mapping>

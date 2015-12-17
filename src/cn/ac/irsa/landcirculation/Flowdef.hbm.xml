@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Flowdef" table="flowdef" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="flowCode" type="string">
+            <column name="flowCode" length="2" />
+        </property>
+        <property name="flowName" type="string">
+            <column name="flowName" length="10" />
+        </property>
+        <property name="flowDesc" type="string">
+            <column name="flowDesc" length="50" />
+        </property>
+        <set name="statuses" table="status" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="flowDefId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Status" />
+        </set>
+        <set name="stepdefs" table="stepdef" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="flowDefId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Stepdef" />
+        </set>
+        <set name="applies" table="apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="flowDefId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Apply" />
+        </set>
+    </class>
+</hibernate-mapping>

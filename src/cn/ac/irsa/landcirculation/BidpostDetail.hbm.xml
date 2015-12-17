@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.BidpostDetail" table="bidpost_detail" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="apply" class="cn.ac.irsa.landcirculation.Apply" fetch="select">
+            <column name="applyId" />
+        </many-to-one>
+        <many-to-one name="bidpost" class="cn.ac.irsa.landcirculation.Bidpost" fetch="select">
+            <column name="bidpostId" />
+        </many-to-one>
+        <property name="applierName" type="string">
+            <column name="applierName" length="20" />
+        </property>
+        <property name="applierIdcode" type="string">
+            <column name="applierIdcode" length="18" />
+        </property>
+        <property name="landRgArea" type="java.lang.Double">
+            <column name="landRgArea" precision="22" scale="0" />
+        </property>
+        <property name="drylandRgArea" type="java.lang.Double">
+            <column name="drylandRgArea" precision="255" />
+        </property>
+        <property name="paddyfieldRgArea" type="java.lang.Double">
+            <column name="paddyfieldRgArea" precision="255" />
+        </property>
+        <property name="rightAuthType" type="java.lang.Integer">
+            <column name="rightAuthType" />
+        </property>
+        <property name="landwarrantCode" type="string">
+            <column name="landwarrantCode" length="20" />
+        </property>
+        <property name="landcontractCode" type="string">
+            <column name="landcontractCode" length="20" />
+        </property>
+        <property name="landAddress" type="string">
+            <column name="landAddress" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

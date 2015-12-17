@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Landcontractimg" table="landcontractimg" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="apply" class="cn.ac.irsa.landcirculation.Apply" fetch="select">
+            <column name="applyId" />
+        </many-to-one>
+        <many-to-one name="userPerson" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="owerId" />
+        </many-to-one>
+        <property name="owerIdcode" type="string">
+            <column name="owerIDCode" length="18" />
+        </property>
+        <property name="contractCode" type="string">
+            <column name="contractCode" length="20" />
+        </property>
+        <property name="pgno" type="java.lang.Integer">
+            <column name="pgno" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="20" />
+        </property>
+        <property name="landcontractimgPathFilename" type="string">
+            <column name="landcontractimgPathFilename" />
+        </property>
+    </class>
+</hibernate-mapping>

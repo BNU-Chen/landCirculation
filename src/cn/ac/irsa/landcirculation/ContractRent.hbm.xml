@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.ContractRent" table="contract_rent" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="contractBase" class="cn.ac.irsa.landcirculation.ContractBase" fetch="select">
+            <column name="contractBaseId" />
+        </many-to-one>
+        <property name="contractNo" type="string">
+            <column name="contractNo" length="18" />
+        </property>
+        <property name="businessProjectName" type="string">
+            <column name="businessProjectName" />
+        </property>
+        <property name="areaType" type="java.lang.Integer">
+            <column name="areaType" />
+        </property>
+        <property name="landArea" type="java.lang.Double">
+            <column name="landArea" precision="255" scale="3" />
+        </property>
+        <property name="drylandArea" type="java.lang.Double">
+            <column name="drylandArea" precision="255" scale="3" />
+        </property>
+        <property name="paddyfieldArea" type="java.lang.Double">
+            <column name="paddyfieldArea" precision="255" scale="3" />
+        </property>
+        <property name="payType" type="java.lang.Integer">
+            <column name="payType" />
+        </property>
+        <property name="payType11" type="java.lang.Integer">
+            <column name="payType11" />
+        </property>
+        <property name="payType12" type="java.lang.Integer">
+            <column name="payType12" />
+        </property>
+        <property name="payType13string" type="string">
+            <column name="payType13String" />
+        </property>
+        <property name="payType13" type="java.lang.Long">
+            <column name="payType13" />
+        </property>
+        <property name="payType14" type="java.lang.Integer">
+            <column name="payType14" />
+        </property>
+        <property name="payType21" type="java.lang.Integer">
+            <column name="payType21" />
+        </property>
+        <property name="payType22" type="java.lang.Integer">
+            <column name="payType22" />
+        </property>
+        <property name="payType22name" type="string">
+            <column name="payType22Name" length="5" />
+        </property>
+        <property name="payType23" type="java.lang.Long">
+            <column name="payType23" />
+        </property>
+        <property name="payType24" type="java.lang.Integer">
+            <column name="payType24" />
+        </property>
+        <property name="payType25" type="java.lang.Integer">
+            <column name="payType25" />
+        </property>
+        <property name="payType25name" type="string">
+            <column name="payType25Name" length="5" />
+        </property>
+        <property name="payType26" type="java.lang.Long">
+            <column name="payType26" />
+        </property>
+        <property name="payType27" type="java.lang.Integer">
+            <column name="payType27" />
+        </property>
+        <property name="payType31" type="string">
+            <column name="payType31" length="200" />
+        </property>
+        <property name="paytimeType" type="java.lang.Integer">
+            <column name="paytimeType" />
+        </property>
+        <property name="paytimeType11" type="java.lang.Integer">
+            <column name="paytimeType11" />
+        </property>
+        <property name="paytimeType12" type="java.lang.Integer">
+            <column name="paytimeType12" />
+        </property>
+        <property name="paytimeType13" type="java.lang.Integer">
+            <column name="paytimeType13" />
+        </property>
+        <property name="paytimeType21" type="java.lang.Integer">
+            <column name="paytimeType21" />
+        </property>
+        <property name="paytimeType22" type="java.lang.Integer">
+            <column name="paytimeType22" />
+        </property>
+        <property name="paytimeType23" type="java.lang.Integer">
+            <column name="paytimeType23" />
+        </property>
+        <property name="paytimeType31" type="date">
+            <column name="paytimeType31" length="10" />
+        </property>
+        <property name="paytimeType41" type="string">
+            <column name="paytimeType41" length="200" />
+        </property>
+        <property name="compensation" type="string">
+            <column name="compensation" length="200" />
+        </property>
+        <property name="landtransferType" type="java.lang.Integer">
+            <column name="landtransferType" />
+        </property>
+        <property name="landtransferType21" type="string">
+            <column name="landtransferType21" length="200" />
+        </property>
+        <property name="landtransferOtherDatum" type="string">
+            <column name="landtransferOtherDatum" length="200" />
+        </property>
+        <property name="landtransferDate" type="date">
+            <column name="landtransferDate" length="10" />
+        </property>
+        <property name="transferOtherRight" type="string">
+            <column name="transferOtherRight" length="200" />
+        </property>
+        <property name="transfeeOtherRight" type="string">
+            <column name="transfeeOtherRight" length="200" />
+        </property>
+        <property name="endcirculationDisposal" type="string">
+            <column name="endcirculationDisposal" length="200" />
+        </property>
+        <property name="contractModify" type="string">
+            <column name="contractModify" length="200" />
+        </property>
+        <property name="contractBreach11" type="java.lang.Integer">
+            <column name="contractBreach11" />
+        </property>
+        <property name="contractBreach12" type="java.lang.Integer">
+            <column name="contractBreach12" />
+        </property>
+        <property name="contractBreach21" type="java.lang.Integer">
+            <column name="contractBreach21" />
+        </property>
+        <property name="contractBreach22" type="java.lang.Integer">
+            <column name="contractBreach22" />
+        </property>
+        <property name="contractBreach31" type="java.lang.Long">
+            <column name="contractBreach31" />
+        </property>
+        <property name="contractBreach41" type="java.lang.Long">
+            <column name="contractBreach41" />
+        </property>
+        <property name="contractBreach71" type="java.lang.Integer">
+            <column name="contractBreach71" />
+        </property>
+        <property name="contractBreach81" type="string">
+            <column name="contractBreach81" length="200" />
+        </property>
+        <property name="other11" type="string">
+            <column name="other11" length="200" />
+        </property>
+        <property name="other21" type="string">
+            <column name="other21" length="200" />
+        </property>
+        <property name="other51" type="string">
+            <column name="other51" length="200" />
+        </property>
+        <property name="authentication" type="java.lang.Integer">
+            <column name="authentication" />
+        </property>
+    </class>
+</hibernate-mapping>

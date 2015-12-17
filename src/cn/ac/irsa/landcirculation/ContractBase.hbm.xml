@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.ContractBase" table="contract_base" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="landwarrant" class="cn.ac.irsa.landcirculation.Landwarrant" fetch="select">
+            <column name="landWarrantId" />
+        </many-to-one>
+        <many-to-one name="apply" class="cn.ac.irsa.landcirculation.Apply" fetch="select">
+            <column name="ApplyId" />
+        </many-to-one>
+        <property name="contractNo" type="string">
+            <column name="contractNo" length="18" />
+        </property>
+        <property name="circulationType" type="string">
+            <column name="circulationType" length="2" />
+        </property>
+        <property name="circulationTypeName" type="string">
+            <column name="circulationTypeName" length="20" />
+        </property>
+        <property name="transferType" type="string">
+            <column name="transferType" length="1" />
+        </property>
+        <property name="transferId" type="java.lang.Integer">
+            <column name="transferId" />
+        </property>
+        <property name="transferIdcode" type="string">
+            <column name="transferIdcode" length="18" />
+        </property>
+        <property name="transferName" type="string">
+            <column name="transferName" length="20" />
+        </property>
+        <property name="transferAddress" type="string">
+            <column name="transferAddress" />
+        </property>
+        <property name="transferTel" type="string">
+            <column name="transferTel" length="11" />
+        </property>
+        <property name="transferEmail" type="string">
+            <column name="transferEmail" />
+        </property>
+        <property name="transferAgentId" type="java.lang.Integer">
+            <column name="transferAgentId" />
+        </property>
+        <property name="transferAgentName" type="string">
+            <column name="transferAgentName" length="20" />
+        </property>
+        <property name="transfeeId" type="java.lang.Integer">
+            <column name="transfeeId" />
+        </property>
+        <property name="transfeeIdcode" type="string">
+            <column name="transfeeIdcode" length="18" />
+        </property>
+        <property name="transfeeName" type="string">
+            <column name="transfeeName" length="20" />
+        </property>
+        <property name="transfeeAddress" type="string">
+            <column name="transfeeAddress" />
+        </property>
+        <property name="transfeeTel" type="string">
+            <column name="transfeeTel" length="11" />
+        </property>
+        <property name="transfeeEmail" type="string">
+            <column name="transfeeEmail" />
+        </property>
+        <property name="transfeePicId" type="java.lang.Integer">
+            <column name="transfeePicId" />
+        </property>
+        <property name="transfeePicIdcode" type="string">
+            <column name="transfeePicIdcode" length="18" />
+        </property>
+        <property name="transfeePicName" type="string">
+            <column name="transfeePicName" length="20" />
+        </property>
+        <property name="transfeePicAddress" type="string">
+            <column name="transfeePicAddress" />
+        </property>
+        <property name="transfeePicTel" type="string">
+            <column name="transfeePicTel" />
+        </property>
+        <property name="transfeePicEmail" type="string">
+            <column name="transfeePicEmail" />
+        </property>
+        <property name="transfeeAgentId" type="java.lang.Integer">
+            <column name="transfeeAgentId" />
+        </property>
+        <property name="transfeeAgentName" type="string">
+            <column name="transfeeAgentName" length="20" />
+        </property>
+        <property name="landAddressCode" type="string">
+            <column name="landAddressCode" length="15" />
+        </property>
+        <property name="landAddressName" type="string">
+            <column name="landAddressName" />
+        </property>
+        <property name="landProvinceCode" type="string">
+            <column name="landProvinceCode" length="2" />
+        </property>
+        <property name="landProvinceName" type="string">
+            <column name="landProvinceName" />
+        </property>
+        <property name="landCityCode" type="string">
+            <column name="landCityCode" length="4" />
+        </property>
+        <property name="landCityName" type="string">
+            <column name="landCityName" />
+        </property>
+        <property name="landCountyCode" type="string">
+            <column name="landCountyCode" length="6" />
+        </property>
+        <property name="landCountyName" type="string">
+            <column name="landCountyName" />
+        </property>
+        <property name="landTownCode" type="string">
+            <column name="landTownCode" length="9" />
+        </property>
+        <property name="landTownName" type="string">
+            <column name="landTownName" />
+        </property>
+        <property name="landVillageCode" type="string">
+            <column name="landVillageCode" length="12" />
+        </property>
+        <property name="landVillageName" type="string">
+            <column name="landVillageName" />
+        </property>
+        <property name="landRgArea" type="java.lang.Double">
+            <column name="landRgArea" precision="13" scale="3" />
+        </property>
+        <property name="paddyfieldRgArea" type="java.lang.Double">
+            <column name="paddyfieldRgArea" precision="13" scale="3" />
+        </property>
+        <property name="drylandRgArea" type="java.lang.Double">
+            <column name="drylandRgArea" precision="13" scale="3" />
+        </property>
+        <property name="landRealArea" type="java.lang.Double">
+            <column name="landRealArea" precision="22" scale="0" />
+        </property>
+        <property name="paddyfieldRealArea" type="java.lang.Double">
+            <column name="paddyfieldRealArea" precision="22" scale="0" />
+        </property>
+        <property name="drylandRealArea" type="java.lang.Double">
+            <column name="drylandRealArea" precision="22" scale="0" />
+        </property>
+        <property name="landNumber" type="java.lang.Integer">
+            <column name="landNumber" />
+        </property>
+        <property name="rightAuthType" type="java.lang.Integer">
+            <column name="rightAuthType" />
+        </property>
+        <property name="landWarrantCode" type="string">
+            <column name="landWarrantCode" length="23" />
+        </property>
+        <property name="landContractCode" type="string">
+            <column name="landContractCode" length="23" />
+        </property>
+        <property name="duration" type="java.lang.Integer">
+            <column name="duration" />
+        </property>
+        <property name="fromDate" type="timestamp">
+            <column name="fromDate" length="19" />
+        </property>
+        <property name="toDate" type="timestamp">
+            <column name="toDate" length="19" />
+        </property>
+        <property name="approvedDate" type="timestamp">
+            <column name="approvedDate" length="19" />
+        </property>
+        <property name="reviewResult" type="string">
+            <column name="reviewResult" length="2" />
+        </property>
+        <property name="reviewComment" type="string">
+            <column name="reviewComment" />
+        </property>
+        <property name="reviewerId" type="java.lang.Integer">
+            <column name="reviewerId" />
+        </property>
+        <property name="reviewerIdcode" type="string">
+            <column name="reviewerIdcode" length="18" />
+        </property>
+        <property name="reviewerName" type="string">
+            <column name="reviewerName" />
+        </property>
+        <set name="contractAssignments" table="contract_assignment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contractBaseId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ContractAssignment" />
+        </set>
+        <set name="contractRents" table="contract_rent" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contractBaseId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ContractRent" />
+        </set>
+        <set name="contractExchanges" table="contract_exchange" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contractBaseId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ContractExchange" />
+        </set>
+        <set name="contractSubcontracts" table="contract_subcontract" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contractBaseId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ContractSubcontract" />
+        </set>
+        <set name="contractShares" table="contract_share" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contractBaseId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ContractShare" />
+        </set>
+    </class>
+</hibernate-mapping>

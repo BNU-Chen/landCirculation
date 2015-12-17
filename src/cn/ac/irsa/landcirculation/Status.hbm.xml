@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Status" table="status" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="flowdef" class="cn.ac.irsa.landcirculation.Flowdef" fetch="select">
+            <column name="flowDefId" />
+        </many-to-one>
+        <property name="flowInstanceId" type="java.lang.Integer">
+            <column name="flowInstanceId" />
+        </property>
+        <property name="finishedDatetime" type="timestamp">
+            <column name="finishedDatetime" length="19" />
+        </property>
+        <property name="currentStepId" type="java.lang.Integer">
+            <column name="currentStepId" />
+        </property>
+        <property name="currentStatusId" type="java.lang.Integer">
+            <column name="currentStatusId" />
+        </property>
+        <property name="currentMsgId" type="java.lang.Integer">
+            <column name="currentMsgId" />
+        </property>
+    </class>
+</hibernate-mapping>

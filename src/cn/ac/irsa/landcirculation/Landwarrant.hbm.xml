@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Landwarrant" table="landwarrant" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userPerson" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="ownerId" />
+        </many-to-one>
+        <property name="warrantCode" type="string">
+            <column name="warrantCode" length="23" />
+        </property>
+        <property name="applyId" type="java.lang.Integer">
+            <column name="applyId" />
+        </property>
+        <property name="ownerIdcode" type="string">
+            <column name="ownerIDCode" length="18" />
+        </property>
+        <property name="warrantImgPathname12" type="string">
+            <column name="warrantImgPathname12" />
+        </property>
+        <property name="warrantImgPathname34" type="string">
+            <column name="warrantImgPathname34" />
+        </property>
+        <property name="warrantImgPathname56" type="string">
+            <column name="warrantImgPathname56" />
+        </property>
+        <property name="warrantImgPathname78" type="string">
+            <column name="warrantImgPathname78" />
+        </property>
+        <property name="warrantImgPathname90" type="string">
+            <column name="warrantImgPathname90" />
+        </property>
+        <set name="applies" table="apply" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="landWarrantId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Apply" />
+        </set>
+        <set name="contractBases" table="contract_base" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="landWarrantId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.ContractBase" />
+        </set>
+    </class>
+</hibernate-mapping>

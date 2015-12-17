@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.Bidenroll" table="bidenroll" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userPersonByReviewerId" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="reviewerId" />
+        </many-to-one>
+        <many-to-one name="userPersonByBidderId" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="bidderId" />
+        </many-to-one>
+        <many-to-one name="bidpost" class="cn.ac.irsa.landcirculation.Bidpost" fetch="select">
+            <column name="bidpostId" />
+        </many-to-one>
+        <property name="enrollNo" type="string">
+            <column name="enrollNo" length="22" />
+        </property>
+        <property name="bidType" type="string">
+            <column name="bidType" length="2" />
+        </property>
+        <property name="applyEndDate" type="date">
+            <column name="applyEndDate" length="10" />
+        </property>
+        <property name="bidDate" type="timestamp">
+            <column name="bidDate" length="19" />
+        </property>
+        <property name="bidderIdcode" type="string">
+            <column name="bidderIdcode" length="18" />
+        </property>
+        <property name="bidderName" type="string">
+            <column name="bidderName" length="20" />
+        </property>
+        <property name="picIdcode" type="string">
+            <column name="picIdcode" />
+        </property>
+        <property name="picName" type="string">
+            <column name="picName" />
+        </property>
+        <property name="picTel" type="string">
+            <column name="picTel" length="11" />
+        </property>
+        <property name="picEmail" type="string">
+            <column name="picEmail" />
+        </property>
+        <property name="picAddress" type="string">
+            <column name="picAddress" />
+        </property>
+        <property name="depositeReceiptPathname" type="string">
+            <column name="depositeReceiptPathname" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="4" />
+        </property>
+        <property name="statusMsg" type="string">
+            <column name="statusMsg" />
+        </property>
+        <property name="reviewResult" type="string">
+            <column name="reviewResult" length="2" />
+        </property>
+        <property name="reviewComment" type="string">
+            <column name="reviewComment" />
+        </property>
+        <set name="bidtenders" table="bidtender" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bidenrollId" />
+            </key>
+            <one-to-many class="cn.ac.irsa.landcirculation.Bidtender" />
+        </set>
+    </class>
+</hibernate-mapping>

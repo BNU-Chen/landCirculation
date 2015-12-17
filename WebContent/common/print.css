@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+body {
+	background: #EEE;
+	width: 794px;
+	margin: 0px auto;
+	font-size: 16px;
+}
+
+.A4 {
+	background: #DDD;
+	width: 760px;
+	height: 1080px;
+	padding: 20px 17px;
+	margin: 0px;
+}
+
+.A4content {
+	background: #EEE;
+	width: 760px;
+	height: 1080px;
+}
+
+.title {
+	font: bolder 24px "宋体";
+	color: #000;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	border-style: none;
+	text-align: center;
+}
+
+.title0 {
+	font: bolder 32px "黑体";
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.title1 {
+	font: bolder 24px "" 黑体 "";
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.title2 {
+	font: bolder 18px "宋体";
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.title3 {
+	font: bolder 16px "宋体";
+	width: 100%;
+/* 	height: 100%; */
+	text-align: center;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.title4 {
+	font: bolder 14px "宋体";
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.title5 {
+	font: bolder 12px "宋体";
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleright1 {
+	font: bolder 24px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: right;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleright2 {
+	font: bolder 18px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.titleright3 {
+	font: bolder 16px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: right;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleright4 {
+	font: bolder 14px "宋体";
+	width: 100%;
+	height: 100%;
+	text-align: right;
+	line-height: 30px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleright5 {
+	font: bolder 12px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: right;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleleft1 {
+	font: bolder 24px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: left;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleleft2 {
+	font: bolder 18px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.titleleft3 {
+	font: bolder 16px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	text-align: left;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleleft4 {
+	font: bolder 14px "宋体";
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	line-height: 30px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.titleleft5 {
+	font: bolder 12px "宋体";
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: left;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.tablenoborder {
+	width: 100%;
+	border-top: 0px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-left: 0px solid #000;
+	text-align: center;
+	background: #FFF;
+}
+
+.tablenoborder td {
+	border-top: 0px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-left: 0px solid #000;
+	text-align: center;
+}
+
+.tableborder1 {
+	width: 100%;
+	border-top: 0px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 0px solid #000;
+	margin: 0px;
+	vertical-align: top;
+	border-collapse: collapse;
+}
+
+.tableborder1 td {
+	border-top: 1px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-left: 1px solid #000;
+	font-size: 12px;
+	min-height: 30px;
+	text-align: center;
+	word-break: break-all;
+}
+
+.tableborder1 .tableborder1 {
+	width: 100%;
+	border-top: 0px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-left: 0px solid #000;
+	margin: 0px;
+	vertical-align: top;
+	border-collapse: collapse;
+}
+
+.tableborder1 .tablenoborder td {
+	border-top: 0px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 0px solid #000;
+	border-left: 0px solid #000;
+	text-align: center;
+}
+
+.tableborder1 .tdleft0 {
+	border-left: 0px solid #000;
+}
+
+.tableborder1 .tdtop0 {
+	border-top: 0px solid #000;
+}
+
+.tdbottom1 {
+	width: 100%;
+	height: 70%;
+	border-bottom: 1px solid #000;
+	line-height: 30px;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+.term {
+	text-align: left;
+	text-indent: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	white-space: normal;
+}
+
+.content {
+	width: 100%;
+	min-width:40px;
+	height: 100%;
+	border-bottom: 1px solid #000;
+	line-height: 30px;
+	vertical-align: bottom;
+	text-align: left;
+	display: inline;
+}
+
+#naviItem,input {
+	height: 30px;
+	min-width: 160px;
+	display: inline-block;
+	position: relative;
+	font-size: 15px;
+	font-weight: bold;
+	color: #F00;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	background: #ddd;
+	border: 1px solid #FFF;
+	margin: 1px -3px;
+	padding: 0px 5px;
+	line-height: 30px;
+	line-height: 30px
+}
+
+#naviItem:hover,input:hover {
+	background: #FC0;
+	text-decoration: none;
+	border: 1px solid #FFF;
+	text-decoration: none;
+}

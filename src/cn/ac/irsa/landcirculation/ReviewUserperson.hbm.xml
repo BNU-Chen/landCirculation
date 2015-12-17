@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-14 18:18:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.ac.irsa.landcirculation.ReviewUserperson" table="review_userperson" catalog="mysql_land_circulation">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userPersonByUserPersonId" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="UserPerson_ID" />
+        </many-to-one>
+        <many-to-one name="userPersonByReviewerId" class="cn.ac.irsa.landcirculation.UserPerson" fetch="select">
+            <column name="Reviewer_ID" />
+        </many-to-one>
+        <property name="userPersonUserId" type="string">
+            <column name="UserPerson_UserID" length="18" />
+        </property>
+        <property name="userPersonUserName" type="string">
+            <column name="UserPerson_UserName" length="20" />
+        </property>
+        <property name="result" type="java.lang.Boolean">
+            <column name="Result" />
+        </property>
+        <property name="advice" type="string">
+            <column name="Advice" length="300" />
+        </property>
+        <property name="reviewerUserId" type="string">
+            <column name="Reviewer_UserID" length="18" />
+        </property>
+        <property name="reviewerUserName" type="string">
+            <column name="Reviewer_UserName" length="20" />
+        </property>
+        <property name="reviewDatetime" type="timestamp">
+            <column name="ReviewDatetime" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
