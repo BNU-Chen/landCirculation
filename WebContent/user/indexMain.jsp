@@ -42,6 +42,7 @@
 	 }
 	 document.oncontextmenu = stop; */
 </script>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/JavaScript">
 	function initArray() {
 		this.length = initArray.arguments.length;
@@ -99,7 +100,7 @@ body {
 #desktop #header {
 	height: 60px;
 	color: #fff;
-	background-color: #0C6;
+	background-color: #05586D;
 	font-size: 36px;
 	line-height: 60px;
 	vertical-align: middle;
@@ -107,7 +108,7 @@ body {
 }
 
 #desktop #topmenu {
-	background-color: #CFC;
+	background-color: #dae6f4;
 	height: 40px;
 }
 
@@ -126,19 +127,45 @@ body {
 	display: inline-block;
 }
 
-#desktop #contentwrap #leftnavi {
+#desktop  {
 	background: #EEE;
-	width: 200px;
+	float: left;
+	margin: 0px;
+	width:100%;
+	
+}
+#contentwrap {
+	background: #EEE;
+	margin: 0px;
+	width:100%;
+	height:610px;
+}
+#leftnavi {
+	background: #EEE;
+	height:600px;
+	width: 15%;
 	float: left;
 	margin: 0px;
 }
 
-#desktop #contentwrap #content {
+#desktop #contentwrap  {
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-left: 200px;
+	
 }
-
+#content {
+	margin-top: 0;
+	margin-bottom: 0;
+	float: left;
+	height:600px;
+	
+}
+.wid84{
+width:84%;
+}
+.wid100{
+width:100%;
+}
 #desktop #footer {
 	height: 30px;
 	background-color: #F60;
@@ -148,11 +175,24 @@ body {
 }
 
 .navitable tr:hover {
-	background:  #CFC;
+	background:  #dae6f4;
 }
+@font-face {font-family: 'iconfont';
+    src: url('iconfont/iconfont.eot'); /* IE9*/
+    src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
 </style>
 </head>
-<body onload="init();">
+<body >
 	<div id="desktop">
 		<div id="header" class="NOPRINT">
 			<img src="../common/images/dl.png" width="582" height="60" />
@@ -181,16 +221,50 @@ body {
 		</div>
 		<div id="contentwrap">
 			<div id="leftnavi" class="NOPRINT">
-				<iframe id="naviTarget" name="naviTarget" height="460"
+				<iframe id="naviTarget" name="naviTarget" height="600px"
 					src="mainMenu.jsp" frameborder="0" width="200" scrolling="no"></iframe>
 			</div>
-			<div id="content">
-				<iframe id="contentTarget" name="contentTarget" height="460"
+			<div id="content" class="wid84" >
+				<iframe id="contentTarget" name="contentTarget" height="600px" width="100%"
 					src="http://www.cqgtfw.gov.cn" frameborder="0" scrolling="auto"></iframe>
 			</div>
 		</div>
-		<div id="footer" class="NOPRINT">国家科技技术部 科技支撑计划项目成果
-			中国科学院遥感与数字地球研究所 版权所有</div>
+		<div  style="color:red;display:inline;"><i id="arrow" class="iconfont">&#xe661;</i></div><br/>
+		
 	</div>
 </body>
+<script type="text/javascript">
+var ishide=false;
+var widthOnhide=document.getElementById("contentTarget").style.width;
+$(function(){
+$("#arrow").click(
+		function(){
+			       if(ishide==true){
+				  $("#leftnavi").show();
+                   $("#content").removeClass("wid100");
+	               $("#content").addClass("wid84");
+				   $("#arrow").html("&#xe661");
+				   document.getElementById("contentTarget").style.width=widthOnhide;
+				   ishide=false;
+		           
+				   }else{
+				   hide();
+				   }
+				   }
+			);
+	}
+);
+function hide(){
+                  $("#leftnavi").hide();
+                   $("#content").removeClass("wid84");
+	               $("#content").addClass("wid100");
+				   $("#arrow").html("&#xe602");
+                   
+				   ishide=true;
+				   var a=document.body.clientWidth;  //取得iframe框架的实际宽度
+                   // alert(a);  //弹出数值测试
+                   document.getElementById("contentTarget").style.width=a+"px";
+
+}
+</script>
 </html>

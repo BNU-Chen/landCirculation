@@ -70,12 +70,21 @@
 	width: 200px;
 	margin: 0px;
 	padding: 0px;
+	height:600px;
+	
 }
 
 body {
 	margin: 0px;
-	background-color: #AFA;
+	background-color: #dae6f4;
 	font-size: 14px;
+}
+
+.heigh2{
+height:45px;
+line-height:1.5;
+text-indent: 20px;
+padding-left:5px;
 }
 
 ul {
@@ -121,6 +130,7 @@ li {
 	border-bottom: 1px solid #FFF;
 	border-left: 1px solid #CCC;
 	text-indent: 5px;
+	cursor:pointer;
 }
 
 a:link {
@@ -133,14 +143,16 @@ a:link {
 	text-decoration: none;
 }
 
+
 .menul1 a:visited {
 	color: #FFF;
 	text-decoration: none;
 }
 
 .menul1 a:hover {
-	background: #AFA;
+	background: #dae6f4;
 	color: #F00;
+	
 }
 
 .hide {
@@ -163,7 +175,7 @@ a:visited {
 }
 
 a:hover {
-	background: #AFA;
+	background: #dae6f4;
 	color: #F00;
 }
 
@@ -176,7 +188,7 @@ a {
 </head>
 <body>
 	<div id="menu">
-		<div class="menul1" onMouseOver="showhide(1)">用户信息管理</div>
+		<div class="menul1" onclick="showhide(1)">用户信息管理</div>
 		<div id="menuitem1" class="menuitem hide">
 			<ul>
 				<li><a href="../user/userPerson!viewUserPerson"
@@ -191,7 +203,7 @@ a {
 					target="contentTarget">土地转入需求登记</a></li>
 			</ul>
 		</div>
-		<div class="menul1" onMouseOver="showhide(2)">流转申请</div>
+		<div class="menul1" onclick="showhide(2)">流转申请</div>
 		<div id="menuitem2" class="menuitem hide">
 			<ul>
 				<li><a href="../apply/Apply!listtoSubmitApply_rent"
@@ -206,7 +218,7 @@ a {
 					target="contentTarget">互换申请</a></li>
 			</ul>
 		</div>
-		<div class="menul1" onMouseOver="showhide(3)">申请审核</div>
+		<div class="menul1" onclick="showhide(3)">申请审核</div>
 		<div id="menuitem3" class="menuitem hide">
 			<ul>
 				<li><a
@@ -216,7 +228,7 @@ a {
 					target="contentTarget">委托交易申请审核</a></li>
 			</ul>
 		</div>
-		<div class="menul1" onMouseOver="showhide(4)">信息公示</div>
+		<div class="menul1" onclick="showhide(4)">信息公示</div>
 		<div id="menuitem4" class="menuitem hide">
 			<ul>
 				<li><a href="../postApply/PostApply!listTobepostApplys"
@@ -230,7 +242,7 @@ a {
 					target="contentTarget">公示结果公告</a></li>
 			</ul>
 		</div>
-		<div class="menul1" onMouseOver="showhide(5)">电子交易</div>
+		<div class="menul1" onclick="showhide(5)">电子交易</div>
 		<div id="menuitem5" class="menuitem hide">
 			<ul>
 				<li><a href="../bid/BidPost!listTopostBidApplys"
@@ -249,7 +261,7 @@ a {
 					target="contentTarget">竞标结果公示</a></li>
 			</ul>
 		</div>
-		<div class="menul1" onMouseOver="showhide(6)">网签网备</div>
+		<div class="menul1" onclick="showhide(6)">网签网备</div>
 		<div id="menuitem6" class="menuitem hide">
 			<ul>
 				<li><a
@@ -272,7 +284,7 @@ a {
 					target="contentTarget">合同网上备案信息审核</a></li>
 			</ul>
 		</div>
-		<div class="menul1" onMouseOver="showhide(7)">流转监管</div>
+		<div class="menul1" onclick="showhide(7)">流转监管</div>
 		<div id="menuitem7" class="menuitem hide">
 			<ul>
 				<li><a href="#">异常交易预警</a></li>
@@ -284,7 +296,27 @@ a {
 				<li><a href="#">转入方经营状况跟踪</a></li>
 			</ul>
 		</div>
-		<div class="menul1" onMouseOver="showhide(8)">系统管理</div>
+		
+		<div class="menul1" onclick="showhide(9)">功能模块</div>
+		<div id="menuitem9" class="menuitem hide">
+			<ul>
+			<li class="heigh2" ><a href="http://localhost:8080/landCirculationPlus/module/index.html" target="contentTarget"  onclick="hideMenu()">农用地供求信息发布、订阅、推送</a></li>
+			<li class="heigh2"><a href="http://localhost:8080/landCirculationPlus/modulb/index.html" target="contentTarget" onclick="hideMenu()">基于空间位置和价格等多组合条件精准检索</a></li>
+				<li class="heigh2"><a href="http://localhost:8080/landCirculationPlus/modulb/index.html" target="contentTarget" onclick="hideMenu()">农用地流转供求信息精准检索</a></li>
+				<li class="heigh2"><a href="http://localhost:8080/landCirculationPlus/modulef/index.html" target="contentTarget"  onclick="hideMenu()">农用地交易态势数据挖掘与分析</a></li>
+				<li class="heigh2"><a href="http://localhost:8080/landCirculationPlus/modulg/index.html" target="contentTarget" onclick="hideMenu()">农用地流转收益分配溯源监测</a></li>
+				<li class="heigh2" ><a
+					href="http://localhost:8080/landCirculationPlus/moduleh/index.html"
+					target="contentTarget" onclick="hideMenu()">农用地流转查询统计</a></li>
+				
+			    <li class="heigh2"><a href="http://localhost:8080/landCirculationPlus/modulei/index.html" target="contentTarget" onclick="hideMenu()">数据管理</a></li>
+
+			</ul>
+
+		</div>
+		
+		
+		<div class="menul1" onclick="showhide(8)">系统管理</div>
 		<div id="menuitem8" class="menuitem hide">
 			<ul>
 				<li><a href="../admin/ActionGroupCode!getActionGroupCodes"
@@ -296,4 +328,7 @@ a {
 		</div>
 	</div>
 </body>
+<script type="text/javascript">function hideMenu(){
+//window.parent.hide();
+}</script>
 </html>
