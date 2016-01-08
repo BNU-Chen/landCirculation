@@ -190,25 +190,25 @@ a {
 			<ul>
 				<li><a
 					href="../circulationDemand/CirculationDemand!listtoSubmitCirculationDemand"
-					target="contentTarget">土地转入需求登记</a></li>				
+					target="contentTarget">土地转入需求登记</a></li>
 				<li><a
-					href="../circulationDemand/CirculationDemand!listtoSubmitCirculationDemand"
+					href="http://localhost:8080/landCirculationPlus/jiansuo_publish/"
 					target="contentTarget">通知公告</a></li>
 				<li><a
-					href="../circulationDemand/CirculationDemand!listtoSubmitCirculationDemand"
+					href="http://localhost:8080/landCirculationPlus/jiansuo_gong/"
 					target="contentTarget">供地信息检索与发布推送</a></li>
 				<li><a
-					href="../circulationDemand/CirculationDemand!listtoSubmitCirculationDemand"
+					href="http://localhost:8080/landCirculationPlus/jiansuo_qiu/"
 					target="contentTarget">需求信息检索与发布推送</a></li>
 				<li><a
-					href="http://localhost:8080/landCirculationPlus/jiansuo_geo/"
+					href="http://localhost:8080/landCirculationPlus/jiansuo_multi/"
 					target="contentTarget" onclick="hideMenu()">多组合条件精准检索</a></li>
 				<li><a
-					href="http://localhost:8080/landCirculationPlus/jiansuo_jiansuo_liuzhuan/"
+					href="http://localhost:8080/landCirculationPlus/jiansuo_liuzhuan/"
 					target="contentTarget" onclick="hideMenu()">流转信息查询统计</a></li>
-				<li><a
+				<!-- <li><a
 					href="http://localhost:8080/landCirculationPlus/moduleh/index.html"
-					target="contentTarget" onclick="hideMenu()">流转供求信息精准检索</a></li>
+					target="contentTarget" onclick="hideMenu()">流转供求信息精准检索</a></li> -->
 			</ul>
 		</div>
 		<div class="menul1" onclick="showhide(2)">流转申请</div>
@@ -318,10 +318,18 @@ a {
 		<div class="menul1" onclick="showhide(8)">收益溯源分配</div>
 		<div id="menuitem8" class="menuitem hide">
 			<ul>
-				<li><a href="#">收益等级</a></li>
-				<li><a href="#">收益查询</a></li>
-				<li><a href="#">统计分析</a></li>
-				<li><a href="#">异常分析</a></li>
+				<li><a
+					href="http://localhost:8080/landCirculationPlus/shouyi_dengji/"
+					target="contentTarget">收益登记</a></li>
+				<li><a
+					href="http://localhost:8080/landCirculationPlus/shouyi_chaxun/"
+					target="contentTarget">收益查询</a></li>
+				<li><a
+					href="http://localhost:8080/landCirculationPlus/shouyi_tongji/"
+					target="contentTarget">统计分析</a></li>
+				<li><a
+					href="http://localhost:8080/landCirculationPlus/shouyi_yichang/"
+					target="contentTarget">异常分析</a></li>
 			</ul>
 		</div>
 
