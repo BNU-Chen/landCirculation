@@ -62,9 +62,12 @@
 <style type="text/css">
 body {
 	background-image: url(../common/images/sy.jpg);
+	background-repeat:repeat;
+	background-position:center center;
 }
 
 #wrap {
+margin-top:250px;
 	width: 675px;
 }
 
